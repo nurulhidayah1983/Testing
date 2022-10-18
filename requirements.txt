@@ -4,7 +4,6 @@ streamlit
 sklearn
 matplotlib
 seaborn
-plotly
 train_test_split
 KNeighborsClassifier
 tree
