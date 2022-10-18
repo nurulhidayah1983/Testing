@@ -2,7 +2,7 @@ altair
 pandas
 streamlit
 sklearn
-matplotlib.pyplot
+matplotlib
 seaborn
 plotly
 train_test_split
