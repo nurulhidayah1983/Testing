@@ -5,3 +5,14 @@ sklearn
 matplotlib.pyplot
 seaborn
 plotly
+train_test_split
+KNeighborsClassifier
+tree
+accuracy_score
+figsize
+HeatMap
+plotly.express
+LabelEncoder
+StandardScaler
+train_test_split
+PCA
