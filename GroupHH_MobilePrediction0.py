@@ -20,7 +20,7 @@ colors = ['#0000FF', '#00FF00',
           '#FFFF00', '#FF00FF']
 
 
-st.pyplot(plt1 = sns.boxplot(data['battery_power'], ax = axs[0])
+st.pyplot(plt1 = sns.boxplot(data['battery_power'], ax = axs[0]))
 st.pyplot(plt2 = sns.boxplot(data['blue'], ax = axs[1]) )
 st.pyplot(plt3 = sns.boxplot(data['clock_speed'], ax = axs[2]) )
 st.pyplot(plt4 = sns.boxplot(data['dual_sim'], ax = axs[3]) )
