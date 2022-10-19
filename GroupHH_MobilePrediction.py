@@ -6,7 +6,7 @@ import seaborn as sns
 
 st.header("Mobile Prediction project")
 
-data = pd.read_csv('train.csv',)
+data = pd.read_csv(r'train.csv',)
 st.write(data.head())
 
 
