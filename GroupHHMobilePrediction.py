@@ -112,8 +112,8 @@ plt.title('Confusion Matrix for KNN In Percentage')
 plt.xlabel('Predicted Value')
 plt.ylabel('True')
 st.write(classification_report(y_test, logregwithoutpca_result))
-fig, ax = plt.subplots()
-st.pyplot(fig)
+##fig, ax = plt.subplots()
+st.pyplot()
 
 
 
