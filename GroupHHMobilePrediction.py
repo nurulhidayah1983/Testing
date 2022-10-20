@@ -93,7 +93,7 @@ st.write(classification_report(y_test, logregwithoutpca_result))
 st.pyplot()
 
 
-st.write('\nConfusion matrix :\n',confusion_matrix(y_test, logregwithoutpca_result))
+arr = np.array([[[1, 2, 3,4], [4, 5, 6,7]], [[1, 2, 3,8], [4, 5, 6,9]]])
 st.write("ConfusionMatrix In Percentage")
 sns.heatmap(confusion_matrix/np.sum(confusion_matrix), annot=True,fmt='.1%', cmap='Set3')
 plt.title('Confusion Matrix for KNN In Percentage')
