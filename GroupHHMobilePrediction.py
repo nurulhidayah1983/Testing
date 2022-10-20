@@ -9,10 +9,9 @@ st.header("Mobile Prediction project")
 
 data = pd.read_csv(r'train.csv',)
 
-if st.checkbox('Show Dataframe'):
+if st.checkbox('Show Dataframe for Mobile Perdictions'):
   st.write(data)
-  
-  st.write('This is a column.')
+  st.write('There are columns for the above Datasets.')
   st.write (data.columns)
 
 st.write('This is a pie chart for price range.')
