@@ -43,7 +43,6 @@ y=dcopy_new['price_range']
 
 
 from sklearn.model_selection import train_test_split
-
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=101)
 
 useless_col = ['battery_power', 'blue', 'clock_speed', 'dual_sim', 'fc', 'four_g',
@@ -62,7 +61,6 @@ X_train2, X_test2, y_train2, y_test2 = train_test_split(X2,y,random_state=42,tes
         
         
 from sklearn.linear_model import LogisticRegression
-
 from sklearn.metrics import confusion_matrix, classification_report
 
 # Logistic Regression
@@ -92,8 +90,8 @@ plt.ylabel('True')
 st.write(classification_report(y_test, logregwithoutpca_result))
 st.pyplot()
 
+confusion_matrix.shape()
 
-arr = np.array([[[1, 2, 3,4], [4, 5, 6,7]], [[1, 2, 3,8], [4, 5, 6,9]]])
 st.write("ConfusionMatrix In Percentage")
 sns.heatmap(confusion_matrix/np.sum(confusion_matrix), annot=True,fmt='.1%', cmap='Set3')
 plt.title('Confusion Matrix for KNN In Percentage')
