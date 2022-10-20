@@ -14,11 +14,11 @@ if st.checkbox('Show Dataframe for Mobile Perdictions'):
   st.write(data)
   st.write('There are columns for the above Datasets.')
   st.write (data.columns)
-st.write('This is a pie chart for price range.')
+st.write('This is a pie chart for price range and showing balanced Dataset.')
 
 pie_chart = px.pie(data,"price_range")
 st.plotly_chart(pie_chart)
-st.write('This is a outlier for px_height.')
+st.write('This is a summary of the MobileData Perdictions.')
 
 data.info()
 dcopy=data.copy()
