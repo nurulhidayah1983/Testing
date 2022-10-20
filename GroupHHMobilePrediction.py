@@ -22,6 +22,12 @@ st.write('This is a pie chart for price range.')
 pie_chart = px.pie(data,"price_range")
 st.plotly_chart(pie_chart)
 
+st.write('This is a outlier for px_height.')
+arr = np.random.normal(1, 1, size=100)
+fig, ax = plt.subplots()
+ax.hist(arr, bins=20)
+st.pyplot(fig)
+
 #st.write('This is a outlier for px_height.')
 #fig,ax = plt.subplots()
 #ax.box(data['px_height'],bins=20)
@@ -176,6 +182,10 @@ sns.heatmap(confusion_matrix, ax=ax)
 st.pyplot(fig)
 
 st.write("Data Visualisation:")
-sns.jointplot(x='ram',y='price_range',data=dcopy_new,color='brown',kind='kde');         
+
+sns.jointplot(x='ram',y='price_range',data=dcopy_new,color='brown',kind='kde');   
+
+sns.pointplot(y="int_memory", x="price_range", data=dcopy_new)
+
   
          
