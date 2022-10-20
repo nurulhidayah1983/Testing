@@ -9,9 +9,7 @@ st.header("Mobile Prediction project")
 data = pd.read_csv(r'train.csv',)
 st.write(data.head())
 
-
 st.write (data.isna().sum())
-
 st.write (data.columns)
 
 
