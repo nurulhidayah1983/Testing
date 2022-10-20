@@ -46,7 +46,7 @@ st.pyplot(fig)
 st.write("Conclusion: The most correlated features are:price_range vs Ram has correlation coefficient of 0.92.")
 
 
-
+data_modelling = dcopy_new.drop(useless_col, axis = 1)
 useless_col = ['battery_power', 'blue', 'clock_speed', 'dual_sim', 'fc', 'four_g',
        'int_memory', 'm_dep', 'mobile_wt', 'n_cores', 'pc', 'px_height',
        'px_width', 'ram', 'sc_h', 'sc_w', 'talk_time', 'three_g',
@@ -66,7 +66,6 @@ pd.set_option('display.max_rows', 10)
 
 X=dcopy.drop(['price_range'],axis=1)
 y=dcopy[['price_range']]
-data_modelling = dcopy_new.drop(useless_col, axis = 1)
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=101)
 
 
