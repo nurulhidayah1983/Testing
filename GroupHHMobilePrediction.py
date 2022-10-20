@@ -93,16 +93,15 @@ st.write(classification_report(y_test, logregwithoutpca_result))
 st.pyplot()
 
 
-
+st.write('\nConfusion matrix :\n',confusion_matrix(y_test, logregwithoutpca_result))
 st.write("ConfusionMatrix In Percentage")
-sns.heatmap(confusion_matrix/np.sum(confusion_matrix), annot=True, 
-            fmt='.1%', cmap='Accent')
+sns.heatmap(confusion_matrix/np.sum(confusion_matrix), annot=True,fmt='.1%', cmap='Set3')
 plt.title('Confusion Matrix for KNN In Percentage')
 plt.xlabel('Predicted Value')
 plt.ylabel('True')
 st.write(classification_report(y_test, logregwithoutpca_result))
 fig, ax = plt.subplots()
-st.pyplot()
+st.pyplot(fig)
 #sns.heatmap(confusion_matrix, ax=ax)
 #st.write(classification_report(y_test, logregwithoutpca_result))
 #st.pyplot(fig)
