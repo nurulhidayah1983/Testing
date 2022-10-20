@@ -11,8 +11,8 @@ st.header("Mobile Prediction project")
 
 data = pd.read_csv(r'train.csv',)
 
-#if st.checkbox('Show Dataframe'):
- # st.write(data)
+if st.checkbox('Show Dataframe'):
+ st.write(data)
   
   st.write('This is a column.')
   st.write (data.columns)
@@ -53,10 +53,11 @@ dcopy_new[['clock_speed', 'm_dep','fc','px_height']] = dcopy[['clock_speed', 'm_
 #sns.heatmap(matrix, ax=ax)
 #st.pyplot(fig)
 
-if st.checkbox("Show Correlation Plot"):
+#if st.checkbox("Show Correlation Plot"):
+            st.write("Show Correlation Plot"):
             st.write("### Heatmap")
             fig, ax = plt.subplots(figsize=(30,15))
-            st.write(sns.heatmap(dcopy.corr(), annot=True,linewidths=0.7,cmap='Set3'))# Train the model
+            st.write(sns.heatmap(dcopy.corr(), annot=True,linewidths=0.9,cmap='Set3'))# Train the model
             st.pyplot()
           
 
