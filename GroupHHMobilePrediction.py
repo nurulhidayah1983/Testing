@@ -15,8 +15,8 @@ def main():
 st.sidebar.title("Mobile Phone Perdiction Price")
 st.sidebar.header("Mobile Phone Perdiction Automation")
 activites = ['Front Camera','Phone Memory']
-  choice = st.sidebar.selectbox("Select Actvities", activites)
-  data = st.file_uploader("Upload Dataset", type=[‘csv’,’txt’,])
+choice = st.sidebar.selectbox("Select Actvities", activites)
+data = st.file_uploader("Upload Dataset", type=[‘csv’,’txt’,])
  
 df = pd.DataFrame()
 if data is not None:
