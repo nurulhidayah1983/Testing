@@ -131,3 +131,5 @@ fig, ax = plt.subplots()
 sns.heatmap(confusion_matrix, ax=ax)
 st.write(classification_report(y_test, logregwithoutpca_result))
 st.pyplot(fig)
+
+
