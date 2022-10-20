@@ -175,3 +175,7 @@ fig, ax = plt.subplots()
 sns.heatmap(confusion_matrix, ax=ax)
 st.pyplot(fig)
 
+st.write("Data Visualisation:")
+sns.jointplot(x='ram',y='price_range',data=dcopy_new,color='brown',kind='kde');         
+  
+         
