@@ -43,8 +43,7 @@ fig, ax = plt.subplots()
 sns.heatmap(matrix, ax=ax)
 st.pyplot(fig)
 
-st.write('Conclusion: The most correlated features are:
-price_range vs Ram has correlation coefficient of 0.92.')
+st.write("Conclusion: The most correlated features are:price_range vs Ram has correlation coefficient of 0.92.")
 
 
 
@@ -95,7 +94,7 @@ st.write('\nConfusion matrix :\n',confusion_matrix(y_test, logregwithoutpca_resu
 #print('\n\nClassification report :\n\n', classification_report(y_test, logregwithoutpca_result))
 #print
 
-st.write('Accuracy:Model Evaluation using Confusion Matrix')
+st.write("Accuracy:Model Evaluation using Confusion Matrix")
 #ConfusionMatrix 
 
 st.write("Visualization Confusion Matrix")
