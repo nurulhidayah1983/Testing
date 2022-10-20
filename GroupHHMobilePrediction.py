@@ -9,6 +9,8 @@ from sklearn.linear_model import LogisticRegression
 
 def main():
  st.title("Mobile Phone Perdiction Price Automation")
+ st.header("Mobile Phone Perdiction Price Automation")
+
 ## Eveything else inside this block
 
 ## Side bar
@@ -25,8 +27,6 @@ if data is not None:
 
 
 st.set_option('deprecation.showPyplotGlobalUse', False)
-
-st.header("Mobile Prediction project")
 
 data = pd.read_csv(r'train.csv',)
 
