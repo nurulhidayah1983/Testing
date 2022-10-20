@@ -5,6 +5,8 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
 from sklearn.metrics import confusion_matrix, classification_report
+from sklearn.linear_model import LogisticRegression
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.header("Mobile Prediction project")
