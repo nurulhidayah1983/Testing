@@ -76,7 +76,7 @@ st.write('\n\nClassification report :\n\n', classification_report(y_test, logreg
 
 #ConfusionMatrix 
 
-#confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result)
+confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result)
 
 st.write("Visualization Confusion Matrix")
 sns.heatmap(confusion_matrix, annot=True, fmt="d", cmap='Set3')
