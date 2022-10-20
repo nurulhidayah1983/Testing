@@ -27,9 +27,11 @@ st.write(dcopy.describe())
 
 st.write('The heatmap to show the most correlated between the features/columns and target')
 matrix = dcopy.corr()
-f, ax = plt.subplots(figsize=(20, 15))
+f, ax = plt.subplots(figsize=(40, 20))
 sns.heatmap(matrix, vmax=1, square=True, annot=True,cmap='Paired')
 
 fig, ax = plt.subplots()
 sns.heatmap(matrix, ax=ax)
 st.write(fig)
+
+
