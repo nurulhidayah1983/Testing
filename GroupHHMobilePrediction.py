@@ -30,11 +30,12 @@ dcopy_new=dcopy
 dcopy_new[['clock_speed', 'm_dep','fc','px_height']] = dcopy[['clock_speed', 'm_dep','fc','px_height']].astype('int64') 
 
 
-st.write("Show Correlation Plot")
-st.write("### Heatmap")
-fig, ax = plt.subplots(figsize=(50,25))
-st.write(sns.heatmap(dcopy.corr(), annot=True,linewidths=0.9,cmap='Set3'))# Train the model
-st.pyplot()
+if st.checkbox('Show Correlation Plote'):
+   st.write("Mobile rice-Perdiction-Correlation Plot")
+   st.write("### Heatmap")
+   fig, ax = plt.subplots(figsize=(50,25))
+   st.write(sns.heatmap(dcopy.corr(), annot=True,linewidths=0.9,cmap='Set3'))# Train the model
+   st.pyplot()
           
 
 from sklearn.model_selection import train_test_split
@@ -77,7 +78,6 @@ st.write('\n\nClassification report :\n\n', classification_report(y_test, logreg
 confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result)
 
 st.write("Visualization Confusion Matrix")
-confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result)
 sns.heatmap(confusion_matrix, annot=True, fmt="d", cmap='Set3')
 plt.title('Confusion Matrix for KNN')
 plt.xlabel('Predicted')
