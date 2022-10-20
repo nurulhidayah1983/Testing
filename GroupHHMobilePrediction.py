@@ -8,7 +8,7 @@ from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.linear_model import LogisticRegression
 
 def main():
- st.title("Mobile Phone Perdiction Price")
+ st.title("Mobile Phone Perdiction Price Automation")
 ## Eveything else inside this block
 
 ## Side bar
