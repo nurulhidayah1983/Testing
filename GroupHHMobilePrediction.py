@@ -76,7 +76,7 @@ st.write('\n\nClassification report :\n\n', classification_report(y_test, logreg
 
 #ConfusionMatrix 
 
-confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result)
+#confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result)
 
 st.write("Visualization Confusion Matrix")
 sns.heatmap(confusion_matrix, annot=True, fmt="d", cmap='Set3')
@@ -107,7 +107,7 @@ group_percentages = ["{0:.1%}".format(value) for value in
 labels = [f"{v2}\n{v3}" for v2, v3 in
           zip(group_counts,group_percentages)]
 labels = np.asarray(labels).reshape(4,4)
-sns.heatmap(confusion_matrix, annot=labels, fmt='', cmap='Pastel1')
+sns.heatmap(confusion_matrix, annot=labels, fmt='', cmap='Set3')
 plt.title('Confusion Matrix for KNN ')
 fig, ax = plt.subplots()
 sns.heatmap(confusion_matrix, ax=ax)
