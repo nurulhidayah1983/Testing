@@ -7,6 +7,19 @@ import plotly.express as px
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.linear_model import LogisticRegression
 
+## Side bar
+st.sidebar.title(“Mobile Phone Perdiction Price”)
+st.sidebar.header(“Mobile Phone Perdiction Automation”)
+activites = [‘Front Camera’,’EDA’,’SweetViz’,’ABOUT’]
+ choice = st.sidebar.selectbox(“Select Actvity”, activites)
+ data = st.file_uploader(“Upload Dataset”, type=[‘csv’,’txt’,])
+ 
+df = pd.DataFrame()
+if data is not None:
+df = pd.read_csv(data)
+st.success(“Data File Uploaded Successfully”)
+
+
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.header("Mobile Prediction project")
