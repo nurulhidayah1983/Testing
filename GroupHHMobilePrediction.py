@@ -128,9 +128,9 @@ labels = [f"{v2}\n{v3}" for v2, v3 in
 labels = np.asarray(labels).reshape(4,4)
 sns.heatmap(confusion_matrix, annot=labels, fmt='', cmap='Set3')
 plt.title('Confusion Matrix for KNN ')
-fig, ax = plt.subplots()
+#fig, ax = plt.subplots()
 sns.heatmap(confusion_matrix, ax=ax)
-st.pyplot(fig)
+st.pyplot()
 
 
 plt.clf()
