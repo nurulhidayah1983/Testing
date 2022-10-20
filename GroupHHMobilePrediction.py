@@ -32,7 +32,7 @@ dcopy_new[['clock_speed', 'm_dep','fc','px_height']] = dcopy[['clock_speed', 'm_
 
 st.write("Show Correlation Plot")
 st.write("### Heatmap")
-fig, ax = plt.subplots(figsize=(30,15))
+fig, ax = plt.subplots(figsize=(50,25))
 st.write(sns.heatmap(dcopy.corr(), annot=True,linewidths=0.9,cmap='Set3'))# Train the model
 st.pyplot()
           
@@ -83,9 +83,7 @@ st.write('\n\nClassification report :\n\n', classification_report(y_test, logreg
 #ConfusionMatrix 
 
 st.write("Visualization Confusion Matrix")
-
 confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result)
-
 sns.heatmap(confusion_matrix, annot=True, fmt="d", cmap='Set3')
 plt.title('Confusion Matrix for KNN')
 plt.xlabel('Predicted')
@@ -119,7 +117,6 @@ plt.title('Confusion Matrix for KNN ')
 fig, ax = plt.subplots()
 sns.heatmap(confusion_matrix, ax=ax)
 st.pyplot(fig)
-
 
 
 plt.clf()
