@@ -47,12 +47,25 @@ st.write("Conclusion: The most correlated features are:price_range vs Ram has co
 
 
 
-X=dcopy.drop(['price_range'],axis=1)
-y=dcopy[['price_range']]
 useless_col = ['battery_power', 'blue', 'clock_speed', 'dual_sim', 'fc', 'four_g',
        'int_memory', 'm_dep', 'mobile_wt', 'n_cores', 'pc', 'px_height',
        'px_width', 'ram', 'sc_h', 'sc_w', 'talk_time', 'three_g',
        'touch_screen', 'wifi']
+y = data_modelling['price_range']
+X1 = data_modelling.drop('price_range', axis = 1)
+X2 = pd.get_dummies(data_modelling)
+X_train1, X_test1, y_train1, y_test1 = train_test_split(X1,y,random_state=42,test_size=0.43)
+X_train2, X_test2, y_train2, y_test2 = train_test_split(X2,y,random_state=42,test_size=0.43)
+
+# import the metrics class
+
+algorithms = ['Random Forest', 'Decision Tree', 'Support Vector Machine']
+metrics    = ['Confusion Matrix', 'Classification Report','Accuracy']
+train_scores = {}
+pd.set_option('display.max_rows', 10)
+
+X=dcopy.drop(['price_range'],axis=1)
+y=dcopy[['price_range']]
 data_modelling = dcopy_new.drop(useless_col, axis = 1)
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=101)
 
@@ -60,7 +73,7 @@ X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=10
 from sklearn.tree import DecisionTreeClassifier
 dtree = DecisionTreeClassifier()
 dtree.fit(X_train,y_train)
-st.write('dtree score is:')
+st.write("Decision Tree Score Is:")
 st.write (dtree.score(X_test,y_test))
 
 
@@ -70,7 +83,43 @@ X2 = pd.get_dummies(data_modelling)
 X_train1, X_test1, y_train1, y_test1 = train_test_split(X1,y,random_state=42,test_size=0.2)
 X_train2, X_test2, y_train2, y_test2 = train_test_split(X2,y,random_state=42,test_size=0.2)
 
+# import the metrics class
 
+algorithms = ['Random Forest', 'Decision Tree', 'Support Vector Machine']
+metrics    = ['Confusion Matrix', 'Classification Report','Accuracy']
+train_scores = {}
+pd.set_option('display.max_rows', 10)
+
+def algorithm_validation(Algorithm=algorithms, Metrics=metrics):        
+    if Algorithm == 'Random Forest':
+        model = RandomForestClassifier(max_depth=2, random_state=0)
+        model.fit(X_train2, y_train1) 
+        y_pred = model.predict(X_test2)
+        X_test1['Predict'] = model.predict(X_test2)
+        
+    elif Algorithm == 'Decision Tree':
+        model = DecisionTreeClassifier(random_state=0)
+        model.fit(X_train2, y_train1) 
+        y_pred = model.predict(X_test2)
+        X_test1['Predict'] = model.predict(X_test2)
+    
+    elif Algorithm == 'Support Vector Machine':
+        model = SVC(kernel='linear')
+        model.fit(X_train2, y_train1) 
+        y_pred = model.predict(X_test2)
+        X_test1['Predict'] = model.predict(X_test2)
+        
+    if Metrics == 'Classification Report':
+        score = classification_report(y_test2, y_pred)
+        
+    elif Metrics == 'Accuracy':
+        score = accuracy_score(y_test2, y_pred)
+        
+    elif Metrics == 'Confusion Matrix':
+        plot_confusion_matrix(model, X_test2, y_test2)
+        score = confusion_matrix(y_test2, y_pred)
+        
+    return print('\nThe ' + Metrics + ' of ' + Algorithm + ' is:\n\n'+ str(score) + '\n')
 
 
 # Train the model
