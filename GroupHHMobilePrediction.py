@@ -6,7 +6,6 @@ import seaborn as sns
 import plotly.express as px
 
 st.header("Mobile Prediction project")
-
 data = pd.read_csv(r'train.csv',)
 
 if st.checkbox('Show Dataframe'):
@@ -31,10 +30,9 @@ from sklearn.neighbors import KNeighborsClassifier
 from sklearn import tree
 from sklearn.metrics import accuracy_score
 
+
 dcopy=data.copy()
-
 dcopy_new=dcopy
-
 dcopy_new[['clock_speed', 'm_dep','fc','px_height']] = dcopy[['clock_speed', 'm_dep','fc','px_height']].astype('int64') 
 
 matrix = dcopy.corr()
@@ -45,12 +43,18 @@ fig, ax = plt.subplots()
 sns.heatmap(matrix, ax=ax)
 st.pyplot(fig)
 
+st.write('Conclusion: The most correlated features are:
+price_range vs Ram has correlation coefficient of 0.92.')
 
 
 
 X=dcopy.drop(['price_range'],axis=1)
 y=dcopy[['price_range']]
-
+useless_col = ['battery_power', 'blue', 'clock_speed', 'dual_sim', 'fc', 'four_g',
+       'int_memory', 'm_dep', 'mobile_wt', 'n_cores', 'pc', 'px_height',
+       'px_width', 'ram', 'sc_h', 'sc_w', 'talk_time', 'three_g',
+       'touch_screen', 'wifi']
+data_modelling = dcopy_new.drop(useless_col, axis = 1)
 X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=101)
 
 
@@ -91,6 +95,7 @@ st.write('\nConfusion matrix :\n',confusion_matrix(y_test, logregwithoutpca_resu
 #print('\n\nClassification report :\n\n', classification_report(y_test, logregwithoutpca_result))
 #print
 
+st.write('Accuracy:Model Evaluation using Confusion Matrix')
 #ConfusionMatrix 
 
 st.write("Visualization Confusion Matrix")
