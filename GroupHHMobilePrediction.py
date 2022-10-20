@@ -14,15 +14,19 @@ if st.checkbox('Show Dataframe for Mobile Perdictions'):
   st.write(data)
   st.write('There are columns for the above Datasets.')
   st.write (data.columns)
-
 st.write('This is a pie chart for price range.')
 
 pie_chart = px.pie(data,"price_range")
 st.plotly_chart(pie_chart)
 st.write('This is a outlier for px_height.')
 
+data.info()
+dcopy=data.copy()
+st.write(dcopy.describe())
+
+
 st.write('The heatmap to show the most correlated between the features/columns and target')
-matrix = data.corr()
+matrix = dcopy.corr()
 f, ax = plt.subplots(figsize=(20, 15))
 sns.heatmap(matrix, vmax=1, square=True, annot=True,cmap='Paired')
 
