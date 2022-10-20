@@ -4,6 +4,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import plotly.express as px
+from statistics import mean
 
 st.header("Mobile Prediction project")
 
@@ -18,5 +19,10 @@ st.write('This is a pie chart for price range.')
 
 pie_chart = px.pie(data,"price_range")
 st.plotly_chart(pie_chart)
-
 st.write('This is a outlier for px_height.')
+
+fig, ax = plt.subplots()
+ax.box(data['px_height'], bins=20)
+
+st.pyplot(fig)
+plot.show
