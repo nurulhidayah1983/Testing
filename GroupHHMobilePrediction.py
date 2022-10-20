@@ -132,7 +132,6 @@ plt.title('Confusion Matrix for KNN ')
 ##sns.heatmap(confusion_matrix, ax=ax)
 st.pyplot()
 
-
 plt.clf()
 plt.imshow(confusion_matrix, interpolation='nearest', cmap=plt.cm.Pastel2)
 classNames = ['Negative','Positive','Positive','Positive']
@@ -147,6 +146,7 @@ for i in range(4):
     for j in range(4):
         plt.text(j,i, str(s[i][j])+" = "+str(confusion_matrix[i][j]))
 plt.show()
+st.pyplot()
 
 
 fig, ax = plt.subplots()
