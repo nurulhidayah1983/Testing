@@ -21,8 +21,7 @@ pie_chart = px.pie(data,"price_range")
 st.plotly_chart(pie_chart)
 st.write('This is a outlier for px_height.')
 
-fig, ax = plt.subplots()
-ax.box(data['px_height'], bins=20)
-
-st.pyplot(fig)
-plot.show
+st.write('The heatmap to show the most correlated between the features/columns and target')
+matrix = dcopy.corr()
+f, ax = plt.subplots(figsize=(20, 15))
+sns.heatmap(matrix, vmax=1, square=True, annot=True,cmap='Paired')
