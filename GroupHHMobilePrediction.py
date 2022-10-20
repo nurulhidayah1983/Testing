@@ -93,7 +93,7 @@ st.pyplot()
 
 
 st.write("ConfusionMatrix In Percentage")
-confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result)
+confusion_matrix = confusion_matrix(y_test, logregwithoutpca_result)
 sns.heatmap(confusion_matrix/np.sum(confusion_matrix), annot=True, 
             fmt='.1%', cmap='Accent')
 plt.title('Confusion Matrix for KNN In Percentage')
