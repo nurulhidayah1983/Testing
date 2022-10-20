@@ -13,7 +13,8 @@ def main():
 ## Side bar
 st.sidebar.title("Mobile Phone Perdiction Price")
 st.sidebar.header("Mobile Phone Perdiction Automation")
-activites = ['Front Camera','Phone Memory']
+
+ activites = ['Front Camera','Phone Memory']
  choice = st.sidebar.selectbox("Select Actvities", activites)
  data = st.file_uploader("Upload Dataset", type=[‘csv’,’txt’,])
  
