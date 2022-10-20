@@ -117,10 +117,10 @@ st.write(classification_report(y_test, logregwithoutpca_result))
 st.pyplot()
 
 
-X=dcopy.drop(['price_range'],axis=1)
-y=dcopy[['price_range']]
+#X=dcopy.drop(['price_range'],axis=1)
+#y=dcopy[['price_range']]
 
-X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=101)
+#X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=101)
 
 
 
