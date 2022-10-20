@@ -23,9 +23,9 @@ pie_chart = px.pie(data,"price_range")
 st.plotly_chart(pie_chart)
 
 st.write('This is a outlier for px_height.')
-arr = np.random.normal(1, 1, size=100)
+#arr = np.random.normal(1, 1, size=100)
 fig, ax = plt.subplots()
-ax.box(['fc'], bins=20)
+ax.box([data.fc], bins=20)
 st.pyplot(fig)
 
 #st.write('This is a outlier for px_height.')
@@ -115,13 +115,6 @@ plt.xlabel('Predicted')
 plt.ylabel('True')
 st.write(classification_report(y_test, logregwithoutpca_result))
 st.pyplot()
-
-
-#X=dcopy.drop(['price_range'],axis=1)
-#y=dcopy[['price_range']]
-
-#X_train,X_test,y_train,y_test=train_test_split(X,y,test_size=0.2,random_state=101)
-
 
 
 
