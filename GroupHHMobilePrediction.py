@@ -61,11 +61,11 @@ st.write('dtree score is:')
 st.write (dtree.score(X_test,y_test))
 
 
-#y = data_modelling['price_range']
-#X1 = data_modelling.drop('price_range', axis = 1)
-#X2 = pd.get_dummies(data_modelling)
-#X_train1, X_test1, y_train1, y_test1 = train_test_split(X1,y,random_state=42,test_size=0.2)
-#X_train2, X_test2, y_train2, y_test2 = train_test_split(X2,y,random_state=42,test_size=0.2)
+y = data_modelling['price_range']
+X1 = data_modelling.drop('price_range', axis = 1)
+X2 = pd.get_dummies(data_modelling)
+X_train1, X_test1, y_train1, y_test1 = train_test_split(X1,y,random_state=42,test_size=0.2)
+X_train2, X_test2, y_train2, y_test2 = train_test_split(X2,y,random_state=42,test_size=0.2)
 
 
 
@@ -77,7 +77,7 @@ from sklearn.metrics import confusion_matrix, classification_report
 
 # Logistic Regression
 
-# without reduction
+# Without reduction
 logregwithoutpca = LogisticRegression()
 logregwithoutpca.fit(X_train, y_train)
 
@@ -89,7 +89,6 @@ st.write('Accuracy of Logistic Regression (without PCA)  on testing set: {:.2f}'
      .format(logregwithoutpca.score(X_test, y_test)))
 st.write('\nConfusion matrix :\n',confusion_matrix(y_test, logregwithoutpca_result))
 #print('\n\nClassification report :\n\n', classification_report(y_test, logregwithoutpca_result))
-
 #print
 
 #ConfusionMatrix 
