@@ -91,6 +91,7 @@ plt.ylabel('True')
 st.write(classification_report(y_test, logregwithoutpca_result))
 st.pyplot()
 
+import numpy as np
 
 st.write("ConfusionMatrix In Percentage")
 confusion_matrix = confusion_matrix(y_test, logregwithoutpca_result)
@@ -103,7 +104,7 @@ st.write(classification_report(y_test, logregwithoutpca_result))
 fig, ax = plt.subplots()
 #sns.heatmap(confusion_matrix, ax=ax)
 #st.write(classification_report(y_test, logregwithoutpca_result))
-#st.pyplot(fig)
+st.pyplot(fig)
 
 st.write("ConfusionMatrix Actual Value and Percentage")
 group_counts = ["{0:0.0f}".format(value) for value in
