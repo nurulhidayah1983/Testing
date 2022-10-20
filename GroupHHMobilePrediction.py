@@ -34,8 +34,8 @@ if st.checkbox('Show Mobile Correlation Plot'):
    st.write("Mobile Price-Perdiction-Correlation Between The Features")
    st.write("Correlation Mobile Price is highly correlated with RAM(Phone Memory)")
    st.write("### Heatmap")
-   fig, ax = plt.subplots(figsize=(50,25))
-   st.write(sns.heatmap(dcopy.corr(), annot=True,linewidths=0.9,cmap='Set3'))# Train the model
+   fig, ax = plt.subplots(figsize=(30,15))
+   st.write(sns.heatmap(dcopy.corr(), annot=True,linewidths=0.7,cmap='Set3'))# Train the model
    st.pyplot()
           
 
