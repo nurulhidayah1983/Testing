@@ -11,7 +11,7 @@ st.header("Mobile Prediction project")
 
 data = pd.read_csv(r'train.csv',)
 
-if st.checkbox('Show Dataframe'):
+if st.checkbox('Show Dataframe')
  st.write(data)
  
  st.write('This is a column.')
