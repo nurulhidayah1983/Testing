@@ -134,7 +134,9 @@ fig, ax = plt.subplots()
 sns.heatmap(confusion_matrix, ax=ax)
 st.pyplot(fig)
 st.write("Data Visualisation:")
-st.write(sns.jointplot(x='ram',y='price_range',data=dcopy_new,color='brown',kind='kde'));   
+
+st.write(sns.jointplot(x='ram',y='price_range',data=dcopy_new,color='brown',kind='kde'))
+
 st.write(sns.pointplot(y="int_memory", x="price_range", data=dcopy_new))
 
   
