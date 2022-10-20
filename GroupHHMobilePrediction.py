@@ -143,6 +143,27 @@ st.write('\nConfusion matrix :\n',confusion_matrix(y_test, logregwithoutpca_resu
 #print
 
 st.write("Accuracy:Model Evaluation using Confusion Matrix")
+
+from sklearn.model_selection import train_test_split
+X=dcopy_new.drop('price_range',axis=1)
+y=dcopy_new['price_range']
+
+from sklearn.model_selection import train_test_split
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=101)
+y = data_modelling['price_range']
+X1 = data_modelling.drop('price_range', axis = 1)
+X2 = pd.get_dummies(data_modelling)
+X_train1, X_test1, y_train1, y_test1 = train_test_split(X1,y,random_state=42,test_size=0.2)
+X_train2, X_test2, y_train2, y_test2 = train_test_split(X2,y,random_state=42,test_size=0.2)
+
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+
+X_train = scaler.fit_transform(X_train)
+X_test = scaler.transform(X_test)
+
+
+
 #ConfusionMatrix 
 
 st.write("Visualization Confusion Matrix")
