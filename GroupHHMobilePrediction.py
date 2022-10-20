@@ -137,7 +137,7 @@ st.write('Accuracy of Logistic Regression (without PCA) on training set: {:.2f}'
      .format(logregwithoutpca.score(X_train, y_train)))
 st.write('Accuracy of Logistic Regression (without PCA)  on testing set: {:.2f}'
      .format(logregwithoutpca.score(X_test, y_test)))
-st.write('\nConfusion matrix :\n',Confusion_matrix(y_test, logregwithoutpca_result))
+st.write('\nConfusion matrix :\n',confusion_matrix(y_test, logregwithoutpca_result))
 st.write('\n\nClassification report :\n\n', classification_report(y_test, logregwithoutpca_result))
 
 
