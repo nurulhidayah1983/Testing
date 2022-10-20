@@ -133,3 +133,44 @@ st.write(classification_report(y_test, logregwithoutpca_result))
 st.pyplot(fig)
 
 
+
+
+group_counts = ["{0:0.0f}".format(value) for value in
+                confusion_matrix.flatten()]
+group_percentages = ["{0:.1%}".format(value) for value in
+                     confusion_matrix.flatten()/np.sum(confusion_matrix)]
+
+labels = [f"{v2}\n{v3}" for v2, v3 in
+          zip(group_counts,group_percentages)]
+labels = np.asarray(labels).reshape(4,4)
+sns.heatmap(confusion_matrix, annot=labels, fmt='', cmap='Pastel1')
+
+plt.title('Confusion Matrix for KNN ')
+
+fig, ax = plt.subplots()
+sns.heatmap(confusion_matrix, ax=ax)
+st.pyplot(fig)
+
+
+
+
+plt.clf()
+plt.imshow(confusion_matrix, interpolation='nearest', cmap=plt.cm.Pastel2)
+
+classNames = ['Negative','Positive','Positive','Positive']
+plt.title('Mobile Phone Perdiction Confusion Matrix')
+plt.ylabel('True label')
+plt.xlabel('Predicted ')
+tick_marks = np.arange(len(classNames))
+plt.xticks(tick_marks, classNames, rotation=45)
+plt.yticks(tick_marks, classNames)
+s = [['TN','FP','TP','TP'], ['TN','FP','TP','TP'],['TN','FP','TP','TP'],['TN','FP','TP','TP']]
+for i in range(4):
+    for j in range(4):
+        plt.text(j,i, str(s[i][j])+" = "+str(confusion_matrix[i][j]))
+plt.show()
+
+fig, ax = plt.subplots()
+sns.heatmap(confusion_matrix, ax=ax)
+st.pyplot(fig)
+
