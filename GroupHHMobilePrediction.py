@@ -6,10 +6,11 @@ import seaborn as sns
 import plotly.express as px
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.linear_model import LogisticRegression
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def main():
  st.title("Mobile Phone Perdiction Price Automation")
- st.header("Mobile Phone Perdiction Price Automation")
+ 
 
 ## Eveything else inside this block
 
@@ -25,8 +26,8 @@ if data is not None:
    df = pd.read_csv(data)
    st.success("Data File Uploaded Successfully")
 
+st.header("Mobile Phone Perdiction Price Automation")
 
-st.set_option('deprecation.showPyplotGlobalUse', False)
 
 data = pd.read_csv(r'train.csv',)
 
