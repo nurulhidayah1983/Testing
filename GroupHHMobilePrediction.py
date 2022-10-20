@@ -54,11 +54,11 @@ dcopy_new[['clock_speed', 'm_dep','fc','px_height']] = dcopy[['clock_speed', 'm_
 #st.pyplot(fig)
 
 #if st.checkbox("Show Correlation Plot"):
-            st.write("Show Correlation Plot"):
-            st.write("### Heatmap")
-            fig, ax = plt.subplots(figsize=(30,15))
-            st.write(sns.heatmap(dcopy.corr(), annot=True,linewidths=0.9,cmap='Set3'))# Train the model
-            st.pyplot()
+st.write("Show Correlation Plot"):
+ st.write("### Heatmap")
+fig, ax = plt.subplots(figsize=(30,15))
+st.write(sns.heatmap(dcopy.corr(), annot=True,linewidths=0.9,cmap='Set3'))# Train the model
+st.pyplot()
           
 
 from sklearn.model_selection import train_test_split
