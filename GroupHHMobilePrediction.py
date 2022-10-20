@@ -25,10 +25,10 @@ from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn import tree
 from sklearn.metrics import accuracy_score
-
 dcopy=data.copy()
 dcopy_new=dcopy
 dcopy_new[['clock_speed', 'm_dep','fc','px_height']] = dcopy[['clock_speed', 'm_dep','fc','px_height']].astype('int64') 
+
 
 st.write("Show Correlation Plot")
 st.write("### Heatmap")
@@ -40,8 +40,6 @@ st.pyplot()
 from sklearn.model_selection import train_test_split
 X=dcopy_new.drop('price_range',axis=1)
 y=dcopy_new['price_range']
-
-
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=101)
 
@@ -51,7 +49,6 @@ useless_col = ['battery_power', 'blue', 'clock_speed', 'dual_sim', 'fc', 'four_g
        'touch_screen', 'wifi']
 
 data_modelling = dcopy_new.drop(useless_col, axis = 1)
-
 y = data_modelling['price_range']
 X1 = data_modelling.drop('price_range', axis = 1)
 X2 = pd.get_dummies(data_modelling)
@@ -62,13 +59,10 @@ X_train2, X_test2, y_train2, y_test2 = train_test_split(X2,y,random_state=42,tes
         
 from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import confusion_matrix, classification_report
-
 # Logistic Regression
-
 # without reduction
 logregwithoutpca = LogisticRegression()
 logregwithoutpca.fit(X_train, y_train)
-
 logregwithoutpca_result = logregwithoutpca.predict(X_test)#After training-need to perdict
 
 st.write('Accuracy of Logistic Regression (without PCA) on training set: {:.2f}'
@@ -79,7 +73,8 @@ st.write('\nConfusion matrix :\n',confusion_matrix(y_test, logregwithoutpca_resu
 st.write('\n\nClassification report :\n\n', classification_report(y_test, logregwithoutpca_result))
 
 #ConfusionMatrix 
-st.write(confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result))
+import confusion_matrix, classification_report
+confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result)
 
 st.write("Visualization Confusion Matrix")
 confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result)
@@ -90,7 +85,6 @@ plt.ylabel('True')
 st.write(classification_report(y_test, logregwithoutpca_result))
 st.pyplot()
 
-confusion_matrix.shape()
 
 st.write("ConfusionMatrix In Percentage")
 sns.heatmap(confusion_matrix/np.sum(confusion_matrix), annot=True,fmt='.1%', cmap='Set3')
