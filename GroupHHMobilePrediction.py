@@ -73,7 +73,7 @@ st.write('\nConfusion matrix :\n',confusion_matrix(y_test, logregwithoutpca_resu
 st.write('\n\nClassification report :\n\n', classification_report(y_test, logregwithoutpca_result))
 
 #ConfusionMatrix 
-import confusion_matrix, classification_report
+
 confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result)
 
 st.write("Visualization Confusion Matrix")
