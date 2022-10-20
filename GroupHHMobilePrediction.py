@@ -30,8 +30,9 @@ dcopy_new=dcopy
 dcopy_new[['clock_speed', 'm_dep','fc','px_height']] = dcopy[['clock_speed', 'm_dep','fc','px_height']].astype('int64') 
 
 
-if st.checkbox('Show Correlation Plote'):
-   st.write("Mobile rice-Perdiction-Correlation Plot")
+if st.checkbox('Show Mobile Correlation Plot'):
+   st.write("Mobile Price-Perdiction-Correlation Between The Features")
+   st.write("Correlation Mobile Price is highly correlated with RAM(Phone Memory)")
    st.write("### Heatmap")
    fig, ax = plt.subplots(figsize=(50,25))
    st.write(sns.heatmap(dcopy.corr(), annot=True,linewidths=0.9,cmap='Set3'))# Train the model
