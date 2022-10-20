@@ -12,11 +12,10 @@ st.header("Mobile Prediction project")
 data = pd.read_csv(r'train.csv',)
 
 if st.checkbox('Show Dataframe'):
-  st.write(data)
+    st.write(data)
+    st.write('This is a column.')
+    st.write (data.columns)
  
- st.write('This is a column.')
- st.write (data.columns)
-
 st.write('This is a pie chart for price range.')
 
 pie_chart = px.pie(data,"price_range")
