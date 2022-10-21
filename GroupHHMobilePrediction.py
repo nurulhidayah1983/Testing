@@ -61,12 +61,12 @@ if data is not None:
    df = pd.read_csv(data)
    st.success("Data File Uploaded Successfully")
 
-st.slider(label="Battery Size", min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None,
+##st.slider(label="Battery Size", min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None,
           on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")   
-st.slider(label="InternalPhoneMemory", min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None,
+##st.slider(label="InternalPhoneMemory", min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None,
           on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")   
    
-st.slider(label="PhoneMemory(RAM)", min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None,
+##st.slider(label="PhoneMemory(RAM)", min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None,
           on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible") 
 
       
