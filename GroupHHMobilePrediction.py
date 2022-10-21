@@ -39,13 +39,13 @@ def main():
 ## Eveything else inside this block
 
 def user_input_features():
-  st.sidebar.BatteryCap = st.sidebar.slider('BatteryCapacity',500,800,1000,1200,1400,1600,1800,2000)
+   BatteryCap = st.sidebar.slider('BatteryCapacity',500,800,1000,1200,1400,1600,1800,2000)
    fc = st.sidebar.slider('Front Camera', 2.0, 3.0, 4.0)
    phone_height = st.sidebar.slider('Phone Height', 1.0, 6.9, 1.3)
    phone_width = st.sidebar.slider('Pixel Width', 0.1, 2.5, 0.2)
     data = {'BatteryCapacity': battery,
             'Front Camera': fc,
-            'phoneHeight': phone_height,
+            'Phone Height': phone_height,
             'Phone Width': pixel_width}
     features = pd.DataFrame(data, index=[0])
     return features
