@@ -44,8 +44,8 @@ if data is not None:
    df = pd.read_csv(data)
    st.success("Data File Uploaded Successfully")
 
-BatteryPower = st.slider('Battery size:',0,600,800,1000,1200,1400,1600,1800,2000)
-st.write("BatteryCapacity ", BatteryCapacity,"mAH")
+BatteryPower = st.slider('Battery size:',0,2000,300)
+st.write("BatteryCapacity ", BatteryCapacity,'mAH')
 
 ##st.slider(label="InternalPhoneMemory", min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None,
           ##on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")   
