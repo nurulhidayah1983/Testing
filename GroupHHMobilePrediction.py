@@ -156,8 +156,6 @@ st.write(classification_report(y_test, logregwithoutpca_result))
 st.pyplot()
 
 
-
-
 st.write("ConfusionMatrix Actual Value and Percentage")
 group_counts = ["{0:0.0f}".format(value) for value in
                 confusion_matrix.flatten()]
@@ -195,6 +193,3 @@ st.pyplot()
 
 st.write(sns.pointplot(y="int_memory", x="price_range", data=dcopy_new))
 st.pyplot()
-
-  
-         
