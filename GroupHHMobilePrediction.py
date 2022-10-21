@@ -14,8 +14,8 @@ This app predicts the **MPhonePriceRange** type!
 """)
 
 
-def main():
- st.title("Mobile Phone Perdiction Price Automation")
+##def main():
+##st.title("Mobile Phone Perdiction Price Automation")
  
  uploaded_file = st.file_uploader("Choose a file")
  if uploaded_file is not None:
@@ -36,16 +36,6 @@ def main():
     st.write(dataframe)
 
 
-## Eveything else inside this block
-
-
-
-## Side bar
-st.sidebar.title("Mobile Phone Perdiction Price")
-st.sidebar.header("Mobile Phone Perdiction Automation")
-activites = ['Front Camera','Phone Memory']
-
-st.sidebar.header('User Input Parameters')
 def user_input_features():
    BatteryCap = st.sidebar.slider('BatteryCapacity',0,500,800,1000,1200,1400,1600,1800,2000)
    fc = st.sidebar.slider('Front Camera', 2.0, 3.0, 4.0)
@@ -57,6 +47,12 @@ def user_input_features():
             'Phone Width': pixel_width}
    features = pd.DataFrame(data, index=[0])
    return features
+  
+## Side bar
+st.sidebar.title("Mobile Phone Perdiction Price")
+st.sidebar.header("Mobile Phone Features:")
+activites = ['Front Camera','Phone Memory']
+user_input_features()
 
 
 
@@ -184,7 +180,7 @@ plt.title('Mobile Phone Perdiction Confusion Matrix')
 plt.ylabel('True label')
 plt.xlabel('Predicted ')
 tick_marks = np.arange(len(classNames))
-plt.xticks(tick_marks, classNames, rotation=45)
+plt.xticks(tick_marks, classNames, rotation=90)
 plt.yticks(tick_marks, classNames)
 s = [['TN','FP','TP','TP'], ['TN','FP','TP','TP'],['TN','FP','TP','TP'],['TN','FP','TP','TP']]
 for i in range(4):
