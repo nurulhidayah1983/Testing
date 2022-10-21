@@ -38,16 +38,8 @@ def main():
 
 ## Eveything else inside this block
 
-## Side bar
-st.sidebar.title("Mobile Phone Perdiction Price")
-st.sidebar.header("Mobile Phone Perdiction Automation")
-activites = ['Front Camera','Phone Memory']
-
-BatteryPower = st.slider('Battery size:',0,2000,300)
-st.write("BatteryCapacity ", BatteryCapacity,'mAH')
-
 def user_input_features():
-   BatteryCap = st.sidebar.slider('BatteryCapacity',500,800,1000,1200,1400,1600,1800,2000)
+  st.sidebar.BatteryCap = st.sidebar.slider('BatteryCapacity',500,800,1000,1200,1400,1600,1800,2000)
    fc = st.sidebar.slider('Front Camera', 2.0, 3.0, 4.0)
    phone_height = st.sidebar.slider('Phone Height', 1.0, 6.9, 1.3)
    phone_width = st.sidebar.slider('Pixel Width', 0.1, 2.5, 0.2)
@@ -57,6 +49,15 @@ def user_input_features():
             'Phone Width': pixel_width}
     features = pd.DataFrame(data, index=[0])
     return features
+
+
+## Side bar
+st.sidebar.title("Mobile Phone Perdiction Price")
+st.sidebar.header("Mobile Phone Perdiction Automation")
+activites = ['Front Camera','Phone Memory']
+
+
+
 
 
 
