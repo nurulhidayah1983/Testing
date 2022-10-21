@@ -53,7 +53,7 @@ def user_input_features():
 st.sidebar.title("Mobile Phone Perdiction Price")
 st.sidebar.header("Mobile Phone Features:")
 activites = ['Front Camera','Phone Memory']
-data = user_input_features()
+dataframe = user_input_features()
 
 st.subheader('User Input parameters')
 st.write(data)
