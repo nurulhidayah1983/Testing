@@ -7,6 +7,8 @@ import plotly.express as px
 from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.linear_model import LogisticRegression
 st.set_option('deprecation.showPyplotGlobalUse', False)
+from sklearn import datasets
+
 
 st.write("""
 # Simple Mobile Phone Price Prediction App
@@ -51,9 +53,10 @@ def user_input_features():
 st.sidebar.title("Mobile Phone Perdiction Price")
 st.sidebar.header("Mobile Phone Features:")
 activites = ['Front Camera','Phone Memory']
-user_input_features()
+data = user_input_features()
 
-
+st.subheader('User Input parameters')
+st.write(data)
 
 
 
