@@ -16,7 +16,7 @@ This app predicts the **MPhonePriceRange** type!
 
 ##def main():
 ##st.title("Mobile Phone Perdiction Price Automation")
-uploaded_file = st.file_uploader("Choose a file")
+ uploaded_file = st.file_uploader("Choose a file")
  if uploaded_file is not None:
     # To read file as bytes:
     bytes_data = uploaded_file.getvalue()
