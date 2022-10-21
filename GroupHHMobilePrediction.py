@@ -38,10 +38,10 @@ if uploaded_file is not None:
 
 
 def user_input_features():
-   BatteryCap = st.sidebar.slider('BatteryCapacity',0,500,800,1000,1200,1400,1600,1800,2000)
-   fc = st.sidebar.slider('Front Camera', 2.0, 3.0, 4.0)
-   phone_height = st.sidebar.slider('Phone Height', 1.0, 6.9, 1.3)
-   phone_width = st.sidebar.slider('Pixel Width', 0.1, 2.5, 0.2)
+   BatteryCap = st.sidebar.slider('BatteryCapacity',(0,800,1000,1200,1400,1600,2000),'mAH')
+   fc = st.sidebar.slider('Front Camera', (0,1.0,2.0, 3.0, 4.0))
+   phone_height = st.sidebar.slider('Phone Height',(200,250,300,350,400,500,750,1000),'Inch')
+   phone_width = st.sidebar.slider('Pixel Width',(600,800,1000,1200,1400,1500,1750),'Cm')
    data = {'BatteryCapacity': BatteryCap,
             'Front Camera': fc,
             'Phone Height': phone_height,
