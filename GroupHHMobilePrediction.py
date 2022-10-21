@@ -8,11 +8,16 @@ from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.linear_model import LogisticRegression
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
+st.write("""
+# Simple Mobile Phone Price Prediction App
+This app predicts the **MPhonePriceRange** type!
+""")
+
+
 def main():
  st.title("Mobile Phone Perdiction Price Automation")
  
  uploaded_file = st.file_uploader("Choose a file")
- 
  if uploaded_file is not None:
     # To read file as bytes:
     bytes_data = uploaded_file.getvalue()
@@ -37,23 +42,31 @@ def main():
 st.sidebar.title("Mobile Phone Perdiction Price")
 st.sidebar.header("Mobile Phone Perdiction Automation")
 activites = ['Front Camera','Phone Memory']
-data = st.file_uploader("Upload Dataset", type=['csv','txt',])
- 
-df = pd.DataFrame()
-if data is not None:
-   df = pd.read_csv(data)
-   st.success("Data File Uploaded Successfully")
 
 BatteryPower = st.slider('Battery size:',0,2000,300)
 st.write("BatteryCapacity ", BatteryCapacity,'mAH')
 
-##st.slider(label="InternalPhoneMemory", min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None,
-          ##on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible")   
-   
-##st.slider(label="PhoneMemory(RAM)", min_value=None, max_value=None, value=None, step=None, format=None, key=None, help=None,
-          ##on_change=None, args=None, kwargs=None, *, disabled=False, label_visibility="visible") 
+def user_input_features():
+   BatteryCap = st.sidebar.slider('BatteryCapacity',500,800,1000,1200,1400,1600,1800,2000)
+   fc = st.sidebar.slider('Front Camera', 2.0, 3.0, 4.0)
+   phone_height = st.sidebar.slider('Phone Height', 1.0, 6.9, 1.3)
+   phone_width = st.sidebar.slider('Pixel Width', 0.1, 2.5, 0.2)
+    data = {'BatteryCapacity': battery,
+            'Front Camera': fc,
+            'phoneHeight': phone_height,
+            'Phone Width': pixel_width}
+    features = pd.DataFrame(data, index=[0])
+    return features
 
-      
+
+
+data = st.file_uploader("Upload Dataset", type=['csv','txt',])
+
+df = pd.DataFrame()
+if data is not None:
+   df = pd.read_csv(data)
+   st.success("Data File Uploaded Successfully")
+     
 st.header("Mobile Phone Perdiction Price Automation")
 
 data = pd.read_csv(r'train.csv',)
