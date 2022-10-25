@@ -11,7 +11,7 @@ from sklearn import datasets
 
 
 # Display Images
-import Image from pillow to open images
+#import Image from pillow to open images
 from PIL import Image
 img = Image.open("MPhonePerdiction_Pics.jpg")
 # display image using streamlit
