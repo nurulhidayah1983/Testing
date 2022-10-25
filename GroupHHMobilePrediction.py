@@ -56,15 +56,17 @@ dataframe = user_input_features()
 st.subheader('Mobile Phone Features')
 st.write(dataframe)
 
-data = pd.read_csv(r'train.csv',)
-X = data.X_train
-Y = data.y_train
+
      
 
 #Displaying Phone Price Range
 
 st.subheader('Price Range')
 st.write('The Phone Price Range 0 or 1 or 2 or 3')
+
+data = pd.read_csv(r'train.csv',)
+X = data.X_train
+Y = data.y_train
 
 #Print the Price Range
 #st.text("Your Phone Price Range is {}.".format())
