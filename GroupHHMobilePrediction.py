@@ -45,9 +45,9 @@ def user_input_features():
    features = pd.DataFrame(data, index=[0])
    return features
 
-phone = datasets.load_phone()
-X = phone.data
-Y = phone.target
+data = pd.read_csv(r'train.csv',)
+X = data.data
+Y = data.target
      
 
 ## Side bar
