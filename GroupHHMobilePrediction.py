@@ -46,15 +46,16 @@ def user_input_features():
    features = pd.DataFrame(data, index=[0])
    return features
      
-df = user_input_features()
-st.subheader('Mobile Phone Features')
-st.write(df)
-
 
 ## Side bar
 st.sidebar.title("Mobile Phone Perdiction Price")
 st.sidebar.header("Mobile Phone Features Selection:")
 dataframe = user_input_features()
+##Main Page Features & Price Perdictions
+st.subheader('Mobile Phone Features')
+df = user_input_features()
+st.write(df)
+
 
 #Reading the file
 data = pd.read_csv(r'train.csv',)
