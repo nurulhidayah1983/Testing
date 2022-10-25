@@ -57,7 +57,7 @@ st.write(dataframe)
 #Displaying Phone Price Range
 
 st.subheader('Price Range')
-st.write(The Phone Price Range 0 or 1 or 2 or 3'])
+st.write('The Phone Price Range 0 or 1 or 2 or 3'])
 
 #Print the Price Range
 st.text("Your Phone Price Range is {}.".format())
