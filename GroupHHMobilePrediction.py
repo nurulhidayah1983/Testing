@@ -64,7 +64,7 @@ st.sidebar.header("Mobile Phone Features:")
 dataframe = user_input_features()
 
 st.subheader('User Input parameters')
-st.write(data)
+#st.write(data)
 
 price_range= datasets.load_iris()
 X = iris.data
