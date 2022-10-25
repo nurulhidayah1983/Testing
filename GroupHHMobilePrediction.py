@@ -181,8 +181,8 @@ st.pyplot()
 plt.clf()
 
 plt.imshow(confusion_matrix, interpolation='nearest', cmap=plt.cm.Pastel2)
-classNames = ['Negative','Positive','Positive','Positive']
 plt.figure(figsize=(10,10)) 
+classNames = ['Negative','Positive','Positive','Positive']
 plt.title('Mobile Phone Perdiction Confusion Matrix')
 plt.ylabel('True label')
 plt.xlabel('Predicted ')
@@ -198,7 +198,6 @@ st.pyplot()
 
 
 st.write("Data Visualisation:")
-plt.figure(figsize=(10,10))
 st.write(sns.jointplot(x='ram',y='price_range',data=dcopy_new,color='brown',kind='kde'))
 st.pyplot()
 
