@@ -45,9 +45,9 @@ def user_input_features():
    features = pd.DataFrame(data, index=[0])
    return features
 
-data = datasets.load_data()
-X = data.data
-Y = data.target
+phone = datasets.load_phone()
+X = phone.data
+Y = phone.target
      
 
 ## Side bar
