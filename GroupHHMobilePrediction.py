@@ -73,18 +73,18 @@ st.subheader('User Input parameters')
 #clf = RandomForestClassifier()
 #clf.fit(X, Y)
 
-prediction = clf.predict(data)
-prediction_proba = clf.predict_proba(data)
+#prediction = clf.predict(data)
+#prediction_proba = clf.predict_proba(data)
 
 
-st.subheader('Class labels and their corresponding index number')
-st.write(iris.target_names)
+#st.subheader('Class labels and their corresponding index number')
+#st.write(iris.target_names)
 
-st.subheader('Prediction')
-st.write(iris.target_names[prediction])
+#st.subheader('Prediction')
+#st.write(iris.target_names[prediction])
 #st.write(prediction)
 
-st.subheader('Prediction Probability')
+##st.subheader('Prediction Probability')
 st.write(prediction_proba)
 
 
