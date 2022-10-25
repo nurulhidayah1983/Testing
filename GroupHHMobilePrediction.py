@@ -8,6 +8,7 @@ from sklearn.metrics import confusion_matrix, classification_report
 from sklearn.linear_model import LogisticRegression
 st.set_option('deprecation.showPyplotGlobalUse', False)
 from sklearn import datasets
+from sklearn.ensemble import RandomForestClassifier
 
 
 # Display Images
@@ -43,6 +44,10 @@ def user_input_features():
             'Pixel Width': px_width}
    features = pd.DataFrame(data, index=[0])
    return features
+
+data = datasets.load_data()
+X = data.data
+Y = data.target
      
 
 ## Side bar
