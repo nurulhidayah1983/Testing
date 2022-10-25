@@ -62,17 +62,7 @@ st.sidebar.title("Mobile Phone Perdiction Price")
 st.sidebar.header("Mobile Phone Features:")
 dataframe = user_input_features()
 
-st.subheader('User Input parameters')
-
-data = st.file_uploader("Upload Dataset", type=['csv','txt',])
-
-df = pd.DataFrame()
-if data is not None:
-   df = pd.read_csv(data)
-   st.success("Data File Uploaded Successfully")
-     
-st.header("Mobile Phone Perdiction Price Automation")
-
+#Reading the file
 data = pd.read_csv(r'train.csv',)
 ##data= pd.read_csv(uploaded_file)
 st.write(data)
