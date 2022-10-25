@@ -55,7 +55,7 @@ st.subheader('Mobile Phone Features')
 st.write(dataframe)
 
 st.subheader('Price Range')
-st.write(data.price_range)
+st.write(dataframe.price_range)
 
 st.subheader('Displaying-Mobile Phone Price Prediction Dataset')
 #Reading the file
@@ -147,7 +147,6 @@ plt.title('In Percentage')
 plt.xlabel('Predicted Value')
 plt.ylabel('True')
 st.write(classification_report(y_test, logregwithoutpca_result))
-##fig, ax = plt.subplots()
 st.pyplot()
 
 
