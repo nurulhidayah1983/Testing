@@ -70,8 +70,8 @@ st.subheader('User Input parameters')
 #X = iris.data
 #Y = iris.target
 
-clf = RandomForestClassifier()
-clf.fit(X, Y)
+#clf = RandomForestClassifier()
+#clf.fit(X, Y)
 
 prediction = clf.predict(data)
 prediction_proba = clf.predict_proba(data)
