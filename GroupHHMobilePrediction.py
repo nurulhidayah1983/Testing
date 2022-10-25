@@ -50,8 +50,7 @@ def user_input_features():
    # print the level
    # format() is used to print value of a variable at a specific position
    st.text('Selected: {}'.format(battery_power))
-   st.write(battery_power)
-    
+      
    fc = st.sidebar.slider('Front Camera', 0,1,4)
    px_height = st.sidebar.slider('Phone Height',0,200,1000)
    px_width = st.sidebar.slider('Pixel Width',0,600,1750)
