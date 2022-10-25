@@ -35,14 +35,15 @@ if uploaded_file is not None:
     # Can be used wherever a "file-like" object is accepted:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
-
+    
 
 def user_input_features():
-   BatteryCap = st.sidebar.slider('BatteryCapacity',(0,800,1000,1200,1400,1600,2000),'mAH')
-   fc = st.sidebar.slider('Front Camera', (0,1.0,2.0, 3.0, 4.0))
-   phone_height = st.sidebar.slider('Phone Height',(200,250,300,350,400,500,750,1000),'Inch')
-   phone_width = st.sidebar.slider('Pixel Width',(600,800,1000,1200,1400,1500,1750),'Cm')
-   data = {'BatteryCapacity': BatteryCap,
+ 
+  st.text(BatteryCap = st.sidebar.slider('BatteryCapacity',{0,800,1000,1200,1400,1600,2000},'mAH')
+   fc = st.sidebar.slider('Front Camera', {0,1.0,2.0, 3.0, 4.0})
+   phone_height = st.sidebar.slider('Phone Height',{200,250,300,350,400,500,750,1000},'Inch')
+   phone_width = st.sidebar.slider('Pixel Width',{600,800,1000,1200,1400,1500,1750},'Cm')
+   data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
             'Phone Height': phone_height,
             'Phone Width': pixel_width}
