@@ -12,11 +12,11 @@ from sklearn import datasets
 
 # Display Images
 #import Image from pillow to open images
-from PIL import Image
-img = Image.open("MPhonePerdiction_Pics.jpg")
+##from PIL import Image
+##img = Image.open("MPhonePerdiction_Pics.jpg")
 # display image using streamlit
 # width is used to set the width of an image
-st.sidebar.image(img, width=200)
+##st.sidebar.image(img, width=200)
 
 st.write("""
 # Simple Mobile Phone Price Prediction App
@@ -47,6 +47,9 @@ if uploaded_file is not None:
 def user_input_features():
  
    battery_power = st.sidebar.slider('Battery Power',0,800,2000)
+   # print the level
+   # format() is used to print value of a variable at a specific position
+   st.text('Selected: {}'.format(battery_power))
    fc = st.sidebar.slider('Front Camera', 0,1,4)
    px_height = st.sidebar.slider('Phone Height',0,200,1000)
    px_width = st.sidebar.slider('Pixel Width',0,600,1750)
