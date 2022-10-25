@@ -44,23 +44,27 @@ if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
     
-battery_power = st.sidebar.slider('BatteryCapacity',0,800,2000)
-   #fc = st.sidebar.slider('Front Camera', {0,1.0,2.0, 3.0, 4.0})
-   #phone_height = st.sidebar.slider('Phone Height',{200,250,300,350,400,500,750,1000},'Inch')
-   #phone_width = st.sidebar.slider('Pixel Width',{600,800,1000,1200,1400,1500,1750},'Cm')
-data = {'BatteryCapacity': battery_power,
+def user_input_features():
+ 
+   battery_power = st.sidebar.slider('BatteryCapacity',0,800,2000},'mAH')
+   fc = st.sidebar.slider('Front Camera', 0,1.0,4.0)
+   phone_height = st.sidebar.slider('Phone Height',0,200,1000,'Inch')
+   phone_width = st.sidebar.slider('Pixel Width',0,600,1750,'Cm')
+   data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
             'Phone Height': phone_height,
             'Phone Width': pixel_width}
-features = pd.DataFrame(data, index=[0])
- 
+   features = pd.DataFrame(data, index=[0])
+   return features
   
 ## Side bar
 st.sidebar.title("Mobile Phone Perdiction Price")
 st.sidebar.header("Mobile Phone Features:")
 activites = ['Front Camera','Phone Memory']
+dataframe = user_input_features()
 
-
+ 
+  
 st.subheader('User Input parameters')
 st.write(data)
 
