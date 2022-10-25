@@ -63,7 +63,10 @@ st.write(data.head(5).style.background_gradient(sns.color_palette("YlOrBr", as_c
 #Displaying Phone Price Range
 
 st.subheader('Price Range')
-st.write([data.price_range])
+st.write(data['price_range'])
+
+#Print the Price Range
+st.text("Your Phone Price Range is {}.".format())
 
 #if st.checkbox('Show Dataframe'):
    #st.write(data)
