@@ -45,10 +45,7 @@ def user_input_features():
    features = pd.DataFrame(data, index=[0])
    return features
 
-data = pd.read_csv(r'train.csv',)
-X = data.df
-Y = data.target
-     
+
 
 ## Side bar
 st.sidebar.title("Mobile Phone Perdiction Price")
@@ -58,6 +55,11 @@ st.sidebar.header("Features Selection:")
 dataframe = user_input_features()
 st.subheader('Mobile Phone Features')
 st.write(dataframe)
+
+data = pd.read_csv(r'train.csv',)
+X = dataframe.data
+Y = dataframe.target
+     
 
 #Displaying Phone Price Range
 
