@@ -54,19 +54,20 @@ dataframe = user_input_features()
 st.subheader('Mobile Phone Features')
 st.write(dataframe)
 
+#Displaying Phone Price Range
+
+st.subheader('Price Range')
+st.write(data['0,1,2,3'])
+
+#Print the Price Range
+st.text("Your Phone Price Range is {}.".format())
 st.subheader('Displaying-Mobile Phone Price Prediction Dataset')
 #Reading the file
 data = pd.read_csv(r'train.csv',)
 st.write(data.head(5).style.background_gradient(sns.color_palette("YlOrBr", as_cmap=True)))
 #st.write(data)
 
-#Displaying Phone Price Range
 
-st.subheader('Price Range')
-st.write(data['price_range'])
-
-#Print the Price Range
-st.text("Your Phone Price Range is {}.".format())
 
 #if st.checkbox('Show Dataframe'):
    #st.write(data)
