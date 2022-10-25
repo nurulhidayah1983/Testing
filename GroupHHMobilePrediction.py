@@ -25,7 +25,7 @@ This app predicts the **MPhonePriceRange** type!
 
 
 ##def main():
-##st.title("Mobile Phone Perdiction Price Automation")
+st.title("Mobile Phone Perdiction Price Automation")
 uploaded_file = st.file_uploader("Choose a file")
 if uploaded_file is not None:
     # To read file as bytes:
@@ -60,7 +60,6 @@ def user_input_features():
 ## Side bar
 st.sidebar.title("Mobile Phone Perdiction Price")
 st.sidebar.header("Mobile Phone Features:")
-#activites = ['Front Camera','Phone Memory']
 dataframe = user_input_features()
 
 st.subheader('User Input parameters')
@@ -85,7 +84,7 @@ st.subheader('User Input parameters')
 #st.write(prediction)
 
 ##st.subheader('Prediction Probability')
-st.write(prediction_proba)
+#st.write(prediction_proba)
 
 
 
