@@ -97,8 +97,8 @@ if data is not None:
      
 st.header("Mobile Phone Perdiction Price Automation")
 
-data = pd.read_csv(r'train.csv',)
-##data= pd.read_csv(uploaded_file)
+##data = pd.read_csv(r'train.csv',)
+data= pd.read_csv(uploaded_file)
 st.write(data)
 
 if st.checkbox('Show Dataframe'):
