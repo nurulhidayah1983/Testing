@@ -12,11 +12,11 @@ from sklearn import datasets
 
 # Diaplay Images
 # import Image from pillow to open images
-from PIL import Image
-img = Image.open("MPhonePerdiction_Pics.jpg")
+#from PIL import Image
+#img = Image.open("MPhonePerdiction_Pics.jpg")
 # display image using streamlit
 # width is used to set the width of an image
-st.image(img, width=200)
+#st.image(img, width=200)
 
 st.write("""
 # Simple Mobile Phone Price Prediction App
@@ -45,24 +45,22 @@ if uploaded_file is not None:
     st.write(dataframe)
     
 
-def user_input_features():
- 
    battery_power = st.sidebar.slider('BatteryCapacity',{0,800,1000,1200,1400,1600,2000},'mAH')
-   fc = st.sidebar.slider('Front Camera', {0,1.0,2.0, 3.0, 4.0})
-   phone_height = st.sidebar.slider('Phone Height',{200,250,300,350,400,500,750,1000},'Inch')
-   phone_width = st.sidebar.slider('Pixel Width',{600,800,1000,1200,1400,1500,1750},'Cm')
+   #fc = st.sidebar.slider('Front Camera', {0,1.0,2.0, 3.0, 4.0})
+   #phone_height = st.sidebar.slider('Phone Height',{200,250,300,350,400,500,750,1000},'Inch')
+   #phone_width = st.sidebar.slider('Pixel Width',{600,800,1000,1200,1400,1500,1750},'Cm')
    data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
             'Phone Height': phone_height,
             'Phone Width': pixel_width}
    features = pd.DataFrame(data, index=[0])
-   return features
+ 
   
 ## Side bar
 st.sidebar.title("Mobile Phone Perdiction Price")
 st.sidebar.header("Mobile Phone Features:")
 activites = ['Front Camera','Phone Memory']
-dataframe = user_input_features()
+
 
 st.subheader('User Input parameters')
 st.write(data)
