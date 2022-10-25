@@ -163,6 +163,7 @@ st.write('\n\nClassification report :\n\n', classification_report(y_test, logreg
 confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result)
 
 st.write("Visualization Confusion Matrix")
+plt.figure(figsize=(14,14))          
 sns.heatmap(confusion_matrix, annot=True, fmt="d", cmap='Set3')
 plt.title('Confusion Matrix for KNN')
 plt.xlabel('Predicted')
@@ -172,6 +173,7 @@ st.pyplot()
 
 
 st.write("ConfusionMatrix In Percentage")
+plt.figure(figsize=(14,14))          
 sns.heatmap(confusion_matrix/np.sum(confusion_matrix), annot=True,fmt='.1%', cmap='Set3')
 plt.title('Confusion Matrix for KNN In Percentage')
 plt.xlabel('Predicted Value')
@@ -196,6 +198,7 @@ plt.title('Actual Value and Percentage Plots ')
 st.pyplot()
 
 plt.clf()
+plt.figure(figsize=(14,14))
 plt.imshow(confusion_matrix, interpolation='nearest', cmap=plt.cm.Pastel2)
 classNames = ['Negative','Positive','Positive','Positive']
 plt.title('Mobile Phone Perdiction Confusion Matrix')
