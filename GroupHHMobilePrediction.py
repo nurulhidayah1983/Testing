@@ -66,9 +66,9 @@ dataframe = user_input_features()
 st.subheader('User Input parameters')
 #st.write(data)
 
-price_range= datasets.load_iris()
-X = iris.data
-Y = iris.target
+#price_range= datasets.load_iris()
+#X = iris.data
+#Y = iris.target
 
 clf = RandomForestClassifier()
 clf.fit(X, Y)
