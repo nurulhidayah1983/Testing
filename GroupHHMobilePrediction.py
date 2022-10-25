@@ -48,23 +48,21 @@ def user_input_features():
  
    battery_power = st.sidebar.slider('Battery Power',0,800,2000)
    fc = st.sidebar.slider('Front Camera', 0,1,4)
-   phone_height = st.sidebar.slider('Phone Height',0,200,1000)
-   phone_width = st.sidebar.slider('Pixel Width',0,600,1750)
+   px_height = st.sidebar.slider('Phone Height',0,200,1000)
+   px_width = st.sidebar.slider('Pixel Width',0,600,1750)
    data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
-            'Phone Height': phone_height,
-            'Phone Width': pixel_width}
+            'Phone Height': px_height,
+            'Pixel Width': px_width}
    features = pd.DataFrame(data, index=[0])
    return features
   
 ## Side bar
 st.sidebar.title("Mobile Phone Perdiction Price")
 st.sidebar.header("Mobile Phone Features:")
-activites = ['Front Camera','Phone Memory']
+#activites = ['Front Camera','Phone Memory']
 dataframe = user_input_features()
 
- 
-  
 st.subheader('User Input parameters')
 st.write(data)
 
