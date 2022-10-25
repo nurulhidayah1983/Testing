@@ -145,7 +145,7 @@ st.write('\n\nClassification report :\n\n', classification_report(y_test, logreg
 confusion_matrix =confusion_matrix(y_test, logregwithoutpca_result)
 
 st.write("Visualization Confusion Matrix")
-plt.figure(figsize=(14,14))          
+plt.figure(figsize=(10,10))          
 sns.heatmap(confusion_matrix, annot=True, fmt="d", cmap='Set3')
 plt.title('Confusion Matrix for KNN')
 plt.xlabel('Predicted')
@@ -155,7 +155,7 @@ st.pyplot()
 
 
 st.write("ConfusionMatrix In Percentage")
-plt.figure(figsize=(14,14))          
+plt.figure(figsize=(10,10))          
 sns.heatmap(confusion_matrix/np.sum(confusion_matrix), annot=True,fmt='.1%', cmap='Set3')
 plt.title('Confusion Matrix for KNN In Percentage')
 plt.xlabel('Predicted Value')
@@ -166,6 +166,7 @@ st.pyplot()
 
 
 st.write("ConfusionMatrix Actual Value and Percentage")
+plt.figure(figsize=(10,10)) 
 group_counts = ["{0:0.0f}".format(value) for value in
                 confusion_matrix.flatten()]
 group_percentages = ["{0:.1%}".format(value) for value in
@@ -178,9 +179,10 @@ plt.title('Actual Value and Percentage Plots ')
 st.pyplot()
 
 plt.clf()
-plt.figure(figsize=(10,10))
+
 plt.imshow(confusion_matrix, interpolation='nearest', cmap=plt.cm.Pastel2)
 classNames = ['Negative','Positive','Positive','Positive']
+plt.figure(figsize=(10,10)) 
 plt.title('Mobile Phone Perdiction Confusion Matrix')
 plt.ylabel('True label')
 plt.xlabel('Predicted ')
@@ -196,7 +198,7 @@ st.pyplot()
 
 
 st.write("Data Visualisation:")
-plt.figure
+plt.figure(figsize=(10,10))
 st.write(sns.jointplot(x='ram',y='price_range',data=dcopy_new,color='brown',kind='kde'))
 st.pyplot()
 
