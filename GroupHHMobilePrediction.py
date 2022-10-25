@@ -10,13 +10,13 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 from sklearn import datasets
 
 
-# Diaplay Images
-# import Image from pillow to open images
-#from PIL import Image
-#img = Image.open("MPhonePerdiction_Pics.jpg")
+# Display Images
+import Image from pillow to open images
+from PIL import Image
+img = Image.open("MPhonePerdiction_Pics.jpg")
 # display image using streamlit
 # width is used to set the width of an image
-#st.image(img, width=200)
+st.sidebar.image(img, width=200)
 
 st.write("""
 # Simple Mobile Phone Price Prediction App
@@ -50,6 +50,7 @@ def user_input_features():
    fc = st.sidebar.slider('Front Camera', 0,1,4)
    px_height = st.sidebar.slider('Phone Height',0,200,1000)
    px_width = st.sidebar.slider('Pixel Width',0,600,1750)
+
    data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
             'Phone Height': px_height,
@@ -59,7 +60,7 @@ def user_input_features():
   
 ## Side bar
 st.sidebar.title("Mobile Phone Perdiction Price")
-st.sidebar.header("Mobile Phone Features:")
+st.sidebar.header("Mobile Phone Features Selection:")
 dataframe = user_input_features()
 
 #Reading the file
