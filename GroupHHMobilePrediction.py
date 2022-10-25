@@ -54,7 +54,7 @@ dataframe = user_input_features()
 st.subheader('Mobile Phone Features')
 st.write(dataframe)
 
-st.subheader.write("""#Dataset -Mobile Phone Price Prediction App""")
+st.subheader('Dataset -Mobile Phone Price Prediction App')
 #Reading the file
 data = pd.read_csv(r'train.csv',)
 st.write(data.head(5).style.background_gradient(sns.color_palette("YlOrBr", as_cmap=True)))
