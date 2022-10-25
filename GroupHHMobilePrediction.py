@@ -46,7 +46,7 @@ def user_input_features():
    return features
 
 data = pd.read_csv(r'train.csv',)
-X = data.data
+X = data.df
 Y = data.target
      
 
