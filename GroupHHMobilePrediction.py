@@ -57,7 +57,7 @@ st.write(dataframe)
 
 #Reading the file
 data = pd.read_csv(r'train.csv',)
-st.write.data.head(5).style.background_gradient(sns.color_palette("YlOrBr", as_cmap=True))
+st.write(data.head(5).style.background_gradient(sns.color_palette("YlOrBr", as_cmap=True)))
 #st.write(data)
 
 #if st.checkbox('Show Dataframe'):
