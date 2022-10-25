@@ -24,7 +24,6 @@ This app predicts the **MPhonePriceRange** type!
 """)
    
 def user_input_features():
- 
    battery_power = st.sidebar.slider('Battery Power',0,800,2000)
    # print the level
    # format() is used to print value of a variable at a specific position
@@ -38,7 +37,6 @@ def user_input_features():
     
    px_width = st.sidebar.slider('Pixel Width',0,600,1750)
    st.sidebar.text('Pixel Width: {}'.format(px_width))
-    
    data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
             'Phone Height': px_height,
@@ -50,8 +48,7 @@ def user_input_features():
 ## Side bar
 st.sidebar.title("Mobile Phone Perdiction Price")
 st.sidebar.header("Features Selection:")
-dataframe = user_input_features()
-
+#dataframe = user_input_features()
 ##Displaying the Selected Features & Price Perdictions
 dataframe = user_input_features()
 st.subheader('Mobile Phone Features')
