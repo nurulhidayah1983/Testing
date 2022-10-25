@@ -57,8 +57,8 @@ st.subheader('Mobile Phone Features')
 st.write(dataframe)
 
 data = pd.read_csv(r'train.csv',)
-X = dataframe.data
-Y = dataframe.target
+X = X_train
+Y = y_train
      
 
 #Displaying Phone Price Range
