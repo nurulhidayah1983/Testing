@@ -60,9 +60,11 @@ st.subheader('Price Range')
 st.write('The Phone Price Range 0 or 1 or 2 or 3')
 
 #Print the Price Range
-st.text("Your Phone Price Range is {}.".format())
-st.subheader('Displaying-Mobile Phone Price Prediction Dataset')
+#st.text("Your Phone Price Range is {}.".format())
+
+
 #Reading the file
+st.subheader('Displaying-Mobile Phone Price Prediction Dataset')
 data = pd.read_csv(r'train.csv',)
 st.write(data.head(5).style.background_gradient(sns.color_palette("YlOrBr", as_cmap=True)))
 #st.write(data)
