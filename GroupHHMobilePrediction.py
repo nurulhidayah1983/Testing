@@ -54,6 +54,9 @@ dataframe = user_input_features()
 st.subheader('Mobile Phone Features')
 st.write(dataframe)
 
+st.subheader('Price Range')
+st.write(data.price_range)
+
 st.subheader('Displaying-Mobile Phone Price Prediction Dataset')
 #Reading the file
 data = pd.read_csv(r'train.csv',)
