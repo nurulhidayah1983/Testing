@@ -63,30 +63,6 @@ st.sidebar.header("Mobile Phone Features:")
 dataframe = user_input_features()
 
 st.subheader('User Input parameters')
-#st.write(data)
-
-#price_range= datasets.load_iris()
-#X = iris.data
-#Y = iris.target
-
-#clf = RandomForestClassifier()
-#clf.fit(X, Y)
-
-#prediction = clf.predict(data)
-#prediction_proba = clf.predict_proba(data)
-
-
-#st.subheader('Class labels and their corresponding index number')
-#st.write(iris.target_names)
-
-#st.subheader('Prediction')
-#st.write(iris.target_names[prediction])
-#st.write(prediction)
-
-##st.subheader('Prediction Probability')
-#st.write(prediction_proba)
-
-
 
 data = st.file_uploader("Upload Dataset", type=['csv','txt',])
 
@@ -97,8 +73,8 @@ if data is not None:
      
 st.header("Mobile Phone Perdiction Price Automation")
 
-##data = pd.read_csv(r'train.csv',)
-data= pd.read_csv(uploaded_file)
+data = pd.read_csv(r'train.csv',)
+##data= pd.read_csv(uploaded_file)
 st.write(data)
 
 if st.checkbox('Show Dataframe'):
@@ -199,12 +175,10 @@ labels = [f"{v2}\n{v3}" for v2, v3 in
 labels = np.asarray(labels).reshape(4,4)
 sns.heatmap(confusion_matrix, annot=labels, fmt='', cmap='Set3')
 plt.title('Actual Value and Percentage Plots ')
-##fig, ax = plt.subplots()
-##sns.heatmap(confusion_matrix, ax=ax)
 st.pyplot()
 
 plt.clf()
-plt.figure(figsize=(14,14))
+plt.figure(figsize=(10,10))
 plt.imshow(confusion_matrix, interpolation='nearest', cmap=plt.cm.Pastel2)
 classNames = ['Negative','Positive','Positive','Positive']
 plt.title('Mobile Phone Perdiction Confusion Matrix')
@@ -222,6 +196,7 @@ st.pyplot()
 
 
 st.write("Data Visualisation:")
+plt.figure
 st.write(sns.jointplot(x='ram',y='price_range',data=dcopy_new,color='brown',kind='kde'))
 st.pyplot()
 
