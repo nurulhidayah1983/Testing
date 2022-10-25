@@ -49,13 +49,13 @@ def user_input_features():
 
 ## Side bar
 st.sidebar.title("Mobile Phone Perdiction Price")
-st.sidebar.header("Mobile Phone Features Selection:")
+st.sidebar.header("Features Selection:")
 dataframe = user_input_features()
 
 ##Displaying the Selected Features & Price Perdictions
-df = user_input_features()
+dataframe = user_input_features()
 st.subheader('Mobile Phone Features')
-st.write(df)
+st.write(dataframe)
 
 
 #Reading the file
