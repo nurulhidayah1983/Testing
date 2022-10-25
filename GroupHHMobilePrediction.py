@@ -58,7 +58,7 @@ st.write(dataframe)
 
 data = pd.read_csv(r'train.csv',)
 X = data.X_train
-Y = datay_train
+Y = data.y_train
      
 
 #Displaying Phone Price Range
