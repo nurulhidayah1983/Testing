@@ -72,7 +72,7 @@ st.write(X = data.iloc[:,1:7]) # Independent columns
 st.write(y = data.iloc[:,[-1]]) # Y target column i.e price range
 
 #Print the Price Range
-st.text("Your Phone Price Range is {}.".format())
+st.write("Your Phone Price Range is {}.".format())
 
 
 #Reading the file
