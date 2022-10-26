@@ -86,7 +86,7 @@ st.subheader('Price Range')
 st.write('The Phone Price Range 0 or 1 or 2 or 3')
 data = pd.read_csv(r'train.csv',)
 #Reading the the user input
-X = data.iloc[:,[1,2,4,5,12,13]] # Independent columns
+X = data.iloc[:,[1,2,4,5,12,13,14]] # Independent columns
 Y = data.iloc[:,[-1]] # Y target column i.e price range
 #Starting the Perdiction
 clf = RandomForestClassifier()
