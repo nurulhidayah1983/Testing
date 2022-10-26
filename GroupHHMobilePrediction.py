@@ -42,6 +42,10 @@ def user_input_features():
    st.sidebar.text('Front Camera: {}'.format(fc))
    px_height = st.sidebar.slider('Phone Height',0,200,1960)
    st.sidebar.text('Pixel Height: {}'.format(px_height))
+   #Choosing the RAM     
+   ram = st.sidebar.radio("Select RAM: ", (8, 16,32,64))
+   st.sidebar.success(('RAM: {}'.format(ram))
+ 
    px_width = st.sidebar.slider('Pixel Width',0,600,1998)
    st.sidebar.text('Pixel Width: {}'.format(px_width))
    #Choosing the Dual Sim      
