@@ -40,13 +40,13 @@ def user_input_features():
    st.sidebar.text('Pixel Width: {}'.format(px_width))
    
    blue = st.selectbox("Blue: ", ['0', '1'])
-   # print the selected hoblue
-   st.write("Blue  ", blue)
+   # print the selected blue
+   st.write("Blue  ", format(blue))
  
 # radio button
 # first argument is the title of the radio button
 # second argument is the options for the ratio button
-dual_sim = st.radio("Select Dual Sim: ", ('Yes', 'No'))
+    dual_sim = st.radio("Select Dual Sim: ", ('Yes', 'No'))
                        
 # conditional statement to print Male if male is selected else print female
 # show the result using the success function
@@ -63,9 +63,7 @@ data = {'BatteryCapacity': battery_power,
             'Blue': blue,
             'Dual Sim':dual_sim }
 features = pd.DataFrame(data, index=[0])
- return features
-
-
+return features
 
 ## Side bar
 st.sidebar.title("Mobile Phone Perdiction Price")
