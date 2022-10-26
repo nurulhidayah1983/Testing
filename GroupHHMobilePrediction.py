@@ -40,19 +40,19 @@ def user_input_features():
    blue = st.sidebar.radio("Select Blue Phone : ", ('Yes', 'No'))
    if (blue== 'Yes'):
     st.sidebar.success("Phone Blue")
-    blue == 1
+    blue == '1'
    else:
     st.sidebar.success("No Blue")
-    dual_sim== 0
+    dual_sim== '0'
       
    #Choosing the Dual Sim      
    dual_sim = st.sidebar.radio("Select Dual Sim: ", ('Yes', 'No'))
    if (dual_sim == 'Yes'):
     st.sidebar.success("Dual SIM")
-    dual_sim== 1
+    dual_sim== '1'
    else:
     st.sidebar.success("Only 1 SIM")
-    dual_sim== 0
+    dual_sim== '0'
       
    data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
