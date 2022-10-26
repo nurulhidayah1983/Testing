@@ -91,15 +91,12 @@ Y = data.iloc[:,[-1]] # Y target column i.e price range
 #Starting the Perdiction
 clf = RandomForestClassifier()
 clf.fit(X, Y)
-
 prediction = clf.predict(dataframe)
 prediction_proba = clf.predict_proba(dataframe)
-
 st.subheader('Phone Price Prediction')
 st.write('The Phone features in price range of ',(prediction))
 st.subheader('Prediction Probability')
-st.write(prediction_proba)   
-
+st.warning(prediction_proba)   
 #End Of Perdiction   
    
 #Reading the file
