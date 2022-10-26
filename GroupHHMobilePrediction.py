@@ -68,8 +68,8 @@ data = pd.read_csv(r'train.csv',)
 #X = data.X_train
 #Y = data.y_train
 
-X = data.iloc[:,1:7]) # Independent columns
-Y = data.iloc[:,[-1]]) # Y target column i.e price range
+X = data.iloc[:,1:7] # Independent columns
+Y = data.iloc[:,[-1]] # Y target column i.e price range
 
 clf = RandomForestClassifier()
 clf.fit(X, Y)
