@@ -23,8 +23,7 @@ st.write("""
 # Simple Mobile Phone Price Prediction App
 This app predicts the **MPhonePriceRange** type!
 """)
-   
- def user_input_features():
+def user_input_features():
    battery_power = st.sidebar.slider('Battery Power',0,800,2000)
    # print the level
    # format() is used to print value of a variable at a specific position
