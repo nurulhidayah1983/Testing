@@ -13,11 +13,11 @@ from sklearn.ensemble import RandomForestClassifier
 
 # Display Images
 #import Image from pillow to open images
-from PIL import Image
-img = Image.open("MPhonePerdiction_Pics.jpg")
+#from PIL import Image
+#img = Image.open("MPhonePerdiction_Pics.jpg")
 # display image using streamlit
 # width is used to set the width of an image
-st.image(img, width=200)
+#st.image(img, width=200)
 
 st.write("""
 # Simple Mobile Phone Price Prediction App
