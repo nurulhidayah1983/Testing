@@ -85,6 +85,7 @@ st.write(dataframe)
 st.subheader('Price Range')
 st.write('The Phone Price Range 0 or 1 or 2 or 3')
 data = pd.read_csv(r'train.csv',)
+
 #Reading the the user input
 X = data.iloc[:,[1,2,4,5,12,13,14]] # Independent columns
 Y = data.iloc[:,[-1]] # Y target column i.e price range
@@ -94,7 +95,8 @@ clf.fit(X, Y)
 prediction = clf.predict(dataframe)
 prediction_proba = clf.predict_proba(dataframe)
 st.subheader('Phone Price Prediction')
-st.write('The Phone features in price range of ',(prediction))
+st.write('The Phone features in price range of:)
+st.error("Price Range ",(prediction))
 st.subheader('Prediction Probability')
 st.write(prediction_proba)   
 #End Of Perdiction   
