@@ -46,7 +46,7 @@ def user_input_features():
 # radio button
 # first argument is the title of the radio button
 # second argument is the options for the ratio button
-    dual_sim = st.radio("Select Dual Sim: ", ('Yes', 'No'))
+  dual_sim = st.radio("Select Dual Sim: ", ('Yes', 'No'))
                        
 # conditional statement to print Male if male is selected else print female
 # show the result using the success function
