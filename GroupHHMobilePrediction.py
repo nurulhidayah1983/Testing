@@ -80,7 +80,7 @@ prediction = clf.predict(dataframe)
 prediction_proba = clf.predict_proba(dataframe)
 
 st.subheader('Class labels and their corresponding index number')
-st.write(dataframe.price_range)
+st.write(data.price_range)
          
 st.subheader('Prediction')
 st.write(dataframe.target_names[price_range])
