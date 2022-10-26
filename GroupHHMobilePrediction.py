@@ -41,6 +41,7 @@ def user_input_features():
    if (blue== 'Yes'):
     st.sidebar.success("Phone Blue")
     blue == 1
+    data['blue'].astype(float)
     #blue = float(blue)   
       
    else:
