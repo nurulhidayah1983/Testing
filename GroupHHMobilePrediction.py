@@ -96,7 +96,7 @@ prediction = clf.predict(dataframe)
 prediction_proba = clf.predict_proba(dataframe)
 
 st.subheader('Phone Price Prediction')
-st.success.write(prediction)
+st.success.show(prediction)
 st.subheader('Prediction Probability')
 st.success.write(prediction_proba)   
 
