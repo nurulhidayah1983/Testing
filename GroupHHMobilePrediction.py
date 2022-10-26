@@ -108,10 +108,9 @@ st.write(data.head(5).style.background_gradient(sns.color_palette("YlOrBr", as_c
 
 #Displaying the Pie Chart
 if st.checkbox('Show Dataframe'):
-st.write('This is a pie chart for price range.')
-
-pie_chart = px.pie(data,"price_range")
-st.plotly_chart(pie_chart)
+ st.write('This is a pie chart for price range.')
+ pie_chart = px.pie(data,"price_range")
+ st.plotly_chart(pie_chart)
 
 from sklearn.model_selection import train_test_split
 from sklearn.neighbors import KNeighborsClassifier
