@@ -71,8 +71,12 @@ data = pd.read_csv(r'train.csv',)
 st.write(X = data.iloc[:,1:7]) # Independent columns
 st.write(y = data.iloc[:,[-1]]) # Y target column i.e price range
 
+clf = RandomForestClassifier()
+clf.fit(X, Y)
+
+
 #Print the Price Range
-st.write("Your Phone Price Range is {}.".format())
+#st.write("Your Phone Price Range is {}.".format())
 
 
 #Reading the file
