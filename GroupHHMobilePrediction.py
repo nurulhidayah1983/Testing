@@ -77,6 +77,14 @@ clf.fit(X, Y)
 st.subheader('Class labels and their corresponding index number')
 st.write(data.price_range)
          
+st.subheader('Prediction')
+st.write(data.target_names[price_range])
+#st.write(prediction)
+
+st.subheader('Prediction Probability')
+st.write(prediction_proba)   
+   
+   
          
 #Print the Price Range
 #st.write("Your Phone Price Range is {}.".format())
