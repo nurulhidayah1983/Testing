@@ -46,7 +46,7 @@ def user_input_features():
    st.sidebar.text('Pixel Width: {}'.format(px_width))
    
    #Choosing the RAM     
-   ram = st.sidebar.selectbox("RAM ", ['8', '16','32','64'])
+   ram = st.sidebar.selectbox("RAM ", ['8', '16','32','64','128','2564'])
    # print the selected hobby
    st.sidebar.write("Your RAM is: ", ram)
    
