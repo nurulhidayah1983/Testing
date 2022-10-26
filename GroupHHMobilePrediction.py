@@ -62,7 +62,7 @@ data = {'BatteryCapacity': battery_power,
             'Blue': blue,
             'Dual Sim':dual_sim }
 features = pd.DataFrame(data, index=[0])
-return features
+ return features
 
 ## Side bar
 st.sidebar.title("Mobile Phone Perdiction Price")
@@ -106,14 +106,9 @@ st.write(data.head(5).style.background_gradient(sns.color_palette("YlOrBr", as_c
 #st.write(data)
 
 
-
-#if st.checkbox('Show Dataframe'):
-   #st.write(data)
-   #st.write('This is a column.')
-   #st.write (data.columns)
- 
+#Displaying the Pie Chart
+if st.checkbox('Show Dataframe'):
 st.write('This is a pie chart for price range.')
-
 pie_chart = px.pie(data,"price_range")
 st.plotly_chart(pie_chart)
 
