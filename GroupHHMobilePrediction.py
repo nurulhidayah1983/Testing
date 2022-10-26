@@ -76,15 +76,17 @@ Y = data.iloc[:,[-1]] # Y target column i.e price range
 clf = RandomForestClassifier()
 clf.fit(X, Y)
 
-prediction = clf.predict(data)
-prediction_proba = clf.predict_proba(data)
+prediction = clf.predict(dataframe)
+prediction_proba = clf.predict_proba(dataframe)
 
 st.subheader('Class labels and their corresponding index number')
 st.write(data.price_range)
          
 st.subheader('Prediction')
-st.write(data.target_names[price_range])
+st.write(data.[price_range])
 #st.write(prediction)
+#st.write(data.target_names[price_range])
+st.write(prediction)
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)   
