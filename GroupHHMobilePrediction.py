@@ -96,9 +96,9 @@ prediction = clf.predict(dataframe)
 prediction_proba = clf.predict_proba(dataframe)
 
 st.subheader('Phone Price Prediction')
-st.write(prediction)
+st.success.write(prediction)
 st.subheader('Prediction Probability')
-st.write(prediction_proba)   
+st.success.write(prediction_proba)   
 
 #End Of Perdiction   
    
@@ -110,8 +110,8 @@ st.write(data.head(5).style.background_gradient(sns.color_palette("YlOrBr", as_c
 
 
 #Displaying the Pie Chart
-if st.checkbox('Show Data Type :- Balance/Imbalance'):
- st.write('Click to view  pie chart referring  to dataset and percentage for price range of 0,1,2, and 3.')
+if st.checkbox('Click to view  pie chart on the to dataset'):
+ st.write('Displaying the pie chart referring  to dataset and percentage for price range of 0, 1, 2, and 3.')
  pie_chart = px.pie(data,"price_range")
  st.plotly_chart(pie_chart)
 
