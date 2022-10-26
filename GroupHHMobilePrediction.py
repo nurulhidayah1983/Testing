@@ -68,6 +68,7 @@ def user_input_features():
             'Blue': blue,
             'Dual Sim':dual_sim}
    features = pd.DataFrame(data, index=[0])
+   st.write(dataframe.info())
    return features
 
 ## Side bar
