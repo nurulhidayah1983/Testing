@@ -62,7 +62,7 @@ data = {'BatteryCapacity': battery_power,
             'Blue': blue,
             'Dual Sim':dual_sim }
 features = pd.DataFrame(data, index=[0])
- return features
+return features
 
 ## Side bar
 st.sidebar.title("Mobile Phone Perdiction Price")
