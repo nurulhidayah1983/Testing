@@ -68,17 +68,17 @@ data = pd.read_csv(r'train.csv',)
 #X = data.X_train
 #Y = data.y_train
 
-X = dataframe.iloc[:,1:7] # Independent columns
-Y = dataframe.iloc[:,[-1]] # Y target column i.e price range
+X = data.iloc[:,1:7] # Independent columns
+Y = data.iloc[:,[-1]] # Y target column i.e price range
 
 clf = RandomForestClassifier()
 clf.fit(X, Y)
 
-prediction = clf.predict(dataframe)
-prediction_proba = clf.predict_proba(dataframe)
+prediction = clf.predict(data)
+prediction_proba = clf.predict_proba(data)
 
 st.subheader('Class labels and their corresponding index number')
-st.write(dataframe.price_range)
+st.write(data.price_range)
          
 st.subheader('Prediction')
 st.write(data.target_names[price_range])
