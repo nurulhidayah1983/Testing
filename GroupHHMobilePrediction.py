@@ -104,7 +104,7 @@ st.write(prediction_proba)
 #Reading the file
 st.subheader('Displaying-Mobile Phone Price Prediction Dataset')
 data = pd.read_csv(r'train.csv',)
-st.write(data.head(5).style.background_gradient(sns.color_palette("YlOrBr", as_cmap=True)))
+st.write(data.head(5).style.background_gradient(sns.color_palette("husl", as_cmap=True)))
 #st.write(data)
 
 
