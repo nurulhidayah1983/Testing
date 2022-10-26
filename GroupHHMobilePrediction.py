@@ -83,7 +83,7 @@ prediction_proba = clf.predict_proba(dataframe)
 #st.write(data.price_range)
          
 st.subheader('Phone Price Prediction')
-st.write(data.price_range)
+#st.write(data.price_range)
 st.write(prediction)
 
 st.subheader('Prediction Probability')
