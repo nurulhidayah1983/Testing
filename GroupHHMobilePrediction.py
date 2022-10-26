@@ -34,15 +34,18 @@ def user_input_features():
    st.sidebar.text('Pixel Height: {}'.format(px_height))
    px_width = st.sidebar.slider('Pixel Width',0,600,1998)
    st.sidebar.text('Pixel Width: {}'.format(px_width))
-   blue = st.sidebar.selectbox("Blue: ", ['Yes', 'No'])
+  
+   #Choosing the Dual Sim 
    # print the selected blue
-   #st.sidebar.write("Blue  ". format(blue))
-   if (blue == 'Yes') 
-      st.sidebar.success("Blue ". format(blue))
-      blue == '1'
-   else 
-      blue == '0'
+   blue = st.sidebar.radio("Select Blue Phone : ", ('Yes', 'No'))
+   if (blue== 'Yes'):
+    st.sidebar.success("Phone Blue")
+    blue == 1
+   else:
+    st.sidebar.success("No Blue")
+    dual_sim== 0
       
+   #Choosing the Dual Sim      
    dual_sim = st.sidebar.radio("Select Dual Sim: ", ('Yes', 'No'))
    if (dual_sim == 'Yes'):
     st.sidebar.success("Dual SIM")
