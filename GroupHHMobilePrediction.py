@@ -110,8 +110,8 @@ st.write(data.head(5).style.background_gradient(sns.color_palette("YlOrBr", as_c
 
 
 #Displaying the Pie Chart
-if st.checkbox('Show Dataframe'):
- st.write('This is a pie chart for price range.')
+if st.checkbox('Show Data Type :- Balance/Imbalance'):
+ st.write('Click to view  pie chart referring  to dataset and percentage for price range of 0,1,2, and 3.')
  pie_chart = px.pie(data,"price_range")
  st.plotly_chart(pie_chart)
 
