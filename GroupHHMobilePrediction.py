@@ -26,8 +26,8 @@ This app predicts the **MPhonePriceRange** type!
 def user_input_features():
    #Choosing the Dual Sim 
    # print the selected blue
-   blue = st.sidebar.radio("Select Blue Phone : ", ('Yes', 'No'))
-   if (blue == 'Yes'):
+   blue = st.sidebar.radio("Select Blue Phone : ", ('1', '0'))
+   if (blue == '1'):
     st.sidebar.success("Phone Blue")
     #blue == 1
    else:
@@ -51,8 +51,8 @@ def user_input_features():
    st.sidebar.write("Your RAM is: ", ram)
    
    #Choosing the Dual Sim      
-   dual_sim = st.sidebar.radio("Select Dual Sim: ", ('Yes', 'No'))
-   if (dual_sim == 'Yes'):
+   dual_sim = st.sidebar.radio("Select Dual Sim: ", ('1', '0'))
+   if (dual_sim == '1'):
     st.sidebar.success("Dual SIM")
     #dual_sim  == 1
    else:
