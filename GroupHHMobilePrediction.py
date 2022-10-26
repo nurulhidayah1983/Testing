@@ -24,6 +24,25 @@ st.write("""
 This app predicts the **MPhonePriceRange** type!
 """)
 def user_input_features():
+   #Choosing the Dual Sim 
+   # print the selected blue
+   blue = st.sidebar.radio("Select Blue Phone : ", ('Yes', 'No'))
+   if (blue == 'Yes'):
+    st.sidebar.success("Phone Blue")
+    blue == 1
+   else:
+    st.sidebar.success("No Blue")
+    blue == 0
+    
+   #Choosing the Dual Sim      
+   dual_sim = st.sidebar.radio("Select Dual Sim: ", ('Yes', 'No'))
+   if (dual_sim == 'Yes'):
+    st.sidebar.success("Dual SIM")
+    dual_sim  == 1
+   else:
+    st.sidebar.success("Only 1 SIM")
+    dual_sim == 0
+   
    battery_power = st.sidebar.slider('Battery Power',0,800,2000)
    # print the level
    # format() is used to print value of a variable at a specific position
@@ -35,25 +54,6 @@ def user_input_features():
    px_width = st.sidebar.slider('Pixel Width',0,600,1998)
    st.sidebar.text('Pixel Width: {}'.format(px_width))
   
-   #Choosing the Dual Sim 
-   # print the selected blue
-   blue = st.sidebar.radio("Select Blue Phone : ", ('Yes', 'No'))
-   if (blue== 'Yes'):
-    st.sidebar.success("Phone Blue")
-    blue == 1
-   else:
-    st.sidebar.success("No Blue")
-    blue == 0
-    
-   #Choosing the Dual Sim      
-   dual_sim = st.sidebar.radio("Select Dual Sim: ", ('Yes', 'No'))
-   if (dual_sim == 'Yes'):
-    st.sidebar.success("Dual SIM")
-    dual_sim  == 0
-   else:
-    st.sidebar.success("Only 1 SIM")
-    dual_sim == 0
-      
    data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
             'Phone Height': px_height,
