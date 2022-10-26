@@ -34,15 +34,6 @@ def user_input_features():
     st.sidebar.success("No Blue")
     blue == 0
     
-   #Choosing the Dual Sim      
-   dual_sim = st.sidebar.radio("Select Dual Sim: ", ('Yes', 'No'))
-   if (dual_sim == 'Yes'):
-    st.sidebar.success("Dual SIM")
-    dual_sim  == 1
-   else:
-    st.sidebar.success("Only 1 SIM")
-    dual_sim == 0
-   
    battery_power = st.sidebar.slider('Battery Power',0,800,2000)
    # print the level
    # format() is used to print value of a variable at a specific position
@@ -53,6 +44,14 @@ def user_input_features():
    st.sidebar.text('Pixel Height: {}'.format(px_height))
    px_width = st.sidebar.slider('Pixel Width',0,600,1998)
    st.sidebar.text('Pixel Width: {}'.format(px_width))
+   #Choosing the Dual Sim      
+   dual_sim = st.sidebar.radio("Select Dual Sim: ", ('Yes', 'No'))
+   if (dual_sim == 'Yes'):
+    st.sidebar.success("Dual SIM")
+    dual_sim  == 1
+   else:
+    st.sidebar.success("Only 1 SIM")
+    dual_sim == 0
   
    data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
