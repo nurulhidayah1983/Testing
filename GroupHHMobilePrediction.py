@@ -36,8 +36,9 @@ def user_input_features():
    st.sidebar.text('Pixel Width: {}'.format(px_width))
    blue = st.sidebar.selectbox("Blue: ", ['Yes', 'No'])
    # print the selected blue
-   st.sidebar.write("Blue  ". format(blue))
-   if blue == 'Yes' 
+   #st.sidebar.write("Blue  ". format(blue))
+   if (blue == 'Yes') 
+      st.sidebar.success("Blue ". format(blue))
       blue == '1'
    else 
       blue == '0'
