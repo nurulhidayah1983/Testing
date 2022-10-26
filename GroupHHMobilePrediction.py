@@ -40,8 +40,11 @@ def user_input_features():
    dual_sim = st.radio("Select Dual Sim: ", ('Yes', 'No'))
    if (dual_sim == 'Yes'):
     st.success("Dual SIM")
+    dual_sim==1
    else:
     st.success("Only 1 SIM")
+    dual_sim==0
+      
    data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
             'Phone Height': px_height,
