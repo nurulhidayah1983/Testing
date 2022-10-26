@@ -59,9 +59,7 @@ st.sidebar.header("Features Selection:")
 dataframe = user_input_features()
 st.subheader('Mobile Phone Features')
 st.write(dataframe)
-
-
-     
+   
 
 #Displaying Phone Price Range
 
@@ -70,7 +68,7 @@ st.write('The Phone Price Range 0 or 1 or 2 or 3')
 
 data = pd.read_csv(r'train.csv',)
 
-X = data.iloc[:,[1,2,3,4,12,13]] # Independent columns
+X = data.iloc[:,[1,2,4,5,12,13]] # Independent columns
 Y = data.iloc[:,[-1]] # Y target column i.e price range
 
 clf = RandomForestClassifier()
