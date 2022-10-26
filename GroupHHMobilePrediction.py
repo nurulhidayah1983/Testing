@@ -62,10 +62,11 @@ def user_input_features():
    data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
             'Phone Height': px_height,
-            'RAM' : ram
+            'RAM' : ram,
             'Pixel Width': px_width,
             'Blue': blue,
-            'Dual Sim':dual_sim}
+            'Dual Sim':dual_sim 
+          }
    features = pd.DataFrame(data, index=[0])
    return features
 
