@@ -30,18 +30,38 @@ def user_input_features():
    # format() is used to print value of a variable at a specific position
    st.sidebar.text('BatteryPower: {}'.format(battery_power))
       
-   fc = st.sidebar.slider('Front Camera', 0,1,4)
+   fc = st.sidebar.slider('Front Camera', 0,1,20)
    st.sidebar.text('Front Camera: {}'.format(fc))
     
-   px_height = st.sidebar.slider('Phone Height',0,200,1000)
+   px_height = st.sidebar.slider('Phone Height',0,200,1960)
    st.sidebar.text('Pixel Height: {}'.format(px_height))
     
-   px_width = st.sidebar.slider('Pixel Width',0,600,1750)
+   px_width = st.sidebar.slider('Pixel Width',0,600,1998)
    st.sidebar.text('Pixel Width: {}'.format(px_width))
+   
+   blue = st.selectbox("Blue: ", ['0', '1'])
+   # print the selected hoblue
+   st.write("Blue  ", blue)
+ 
+# radio button
+# first argument is the title of the radio button
+# second argument is the options for the ratio button
+   dual_sim = st.radio("Select Dual Sim: ", ('Yes', 'No')
+                       
+# conditional statement to print Male if male is selected else print female
+# show the result using the success function
+if (status == 'Yes'):
+    st.success("Dual SIM")
+else:
+    st.success("Only 1 SIM ")
+                       
+                       
    data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
             'Phone Height': px_height,
-            'Pixel Width': px_width}
+            'Pixel Width': px_width,
+            'Blue': blue,
+            'Dual Sim':dual_sim }
    features = pd.DataFrame(data, index=[0])
    return features
 
@@ -65,12 +85,8 @@ st.subheader('Price Range')
 st.write('The Phone Price Range 0 or 1 or 2 or 3')
 
 data = pd.read_csv(r'train.csv',)
-#X = data.X_train
-#Y = data.y_train
 
-#X = data.iloc[:,[1,4,12,13],:3] # Independent columns
-
-X = data.iloc[:,[1,4,12,13]] # Independent columns
+X = data.iloc[:,[1,2,3,4,12,13]] # Independent columns
 Y = data.iloc[:,[-1]] # Y target column i.e price range
 
 clf = RandomForestClassifier()
@@ -79,22 +95,13 @@ clf.fit(X, Y)
 prediction = clf.predict(dataframe)
 prediction_proba = clf.predict_proba(dataframe)
 
-#st.subheader('Class labels and their corresponding index number')
-#st.write(data.price_range)
-         
 st.subheader('Phone Price Prediction')
-#st.write(data.price_range)
 st.write(prediction)
 
 st.subheader('Prediction Probability')
 st.write(prediction_proba)   
    
    
-         
-#Print the Price Range
-#st.write("Your Phone Price Range is {}.".format())
-
-
 #Reading the file
 st.subheader('Displaying-Mobile Phone Price Prediction Dataset')
 data = pd.read_csv(r'train.csv',)
