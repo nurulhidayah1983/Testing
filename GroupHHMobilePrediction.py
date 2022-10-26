@@ -68,16 +68,11 @@ data = pd.read_csv(r'train.csv',)
 #X = data.X_train
 #Y = data.y_train
 
-X = data.iloc[:,1:7] # Independent columns
-y = data.iloc[:,[-1]] # Y target column i.e price range
-
-# Apply SelectKBest class to extract top 10 best features
-bestfeatures = SelectKBest(score_func=chi2, k=4)
-fit = bestfeatures.fit(X,y)
-
+st.write(X = data.iloc[:,1:7]) # Independent columns
+st.write(y = data.iloc[:,[-1]]) # Y target column i.e price range
 
 #Print the Price Range
-#st.text("Your Phone Price Range is {}.".format())
+st.text("Your Phone Price Range is {}.".format())
 
 
 #Reading the file
