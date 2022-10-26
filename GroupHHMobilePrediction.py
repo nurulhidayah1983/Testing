@@ -83,7 +83,7 @@ st.subheader('Class labels and their corresponding index number')
 st.write(data.price_range)
          
 st.subheader('Prediction')
-st.write(data[price_range])
+st.write(data.price_range)
 #st.write(prediction)
 #st.write(data.target_names[price_range])
 st.write(prediction)
