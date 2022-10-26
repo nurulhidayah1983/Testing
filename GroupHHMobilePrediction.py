@@ -42,7 +42,7 @@ def user_input_features():
     st.success("Dual SIM")
    else:
     st.success("Only 1 SIM")
-   data = {'BatteryCapacity': battery_power,
+  data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
             'Phone Height': px_height,
             'Pixel Width': px_width,
