@@ -24,12 +24,12 @@ st.write("""
 This app predicts the **MPhonePriceRange** type!
 """)
    
-def user_input_features():
+ def user_input_features():
    battery_power = st.sidebar.slider('Battery Power',0,800,2000)
    # print the level
    # format() is used to print value of a variable at a specific position
    st.sidebar.text('BatteryPower: {}'.format(battery_power))
-      
+   
    fc = st.sidebar.slider('Front Camera', 0,1,20)
    st.sidebar.text('Front Camera: {}'.format(fc))
     
@@ -41,8 +41,7 @@ def user_input_features():
    
    blue = st.selectbox("Blue: ", ['0', '1'])
    # print the selected blue
-   st.write("Blue  ", format(blue))
- 
+   st.write("Blue  ". format(blue))
 # radio button
 # first argument is the title of the radio button
 # second argument is the options for the ratio button
@@ -53,14 +52,12 @@ if (dual_sim == 'Yes'):
     st.success("Dual SIM")
 else:
     st.success("Only 1 SIM")
-                   
-                       
 data = {'BatteryCapacity': battery_power,
             'Front Camera': fc,
             'Phone Height': px_height,
             'Pixel Width': px_width,
             'Blue': blue,
-            'Dual Sim':dual_sim }
+            'Dual Sim':dual_sim}
 features = pd.DataFrame(data, index=[0])
 return features
 
